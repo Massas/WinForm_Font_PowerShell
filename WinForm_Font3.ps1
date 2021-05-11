@@ -1,5 +1,80 @@
+
+# 
+function Get-SelectFont{
+	$arr_font = [System.Drawing.FontFamily]::Families
+
+	# フォントの指定
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	# フォーム全体の設定
+	$form = New-Object System.Windows.Forms.Form
+	$form.Text = "選択"
+	$form.Size = New-Object System.Drawing.Size(300,200)
+	$form.StartPosition = "CenterScreen"
+	$form.font = $Font
+
+	# ラベルを表示
+	$label = New-Object System.Windows.Forms.Label
+	$label.Location = New-Object System.Drawing.Point(10,10)
+	$label.Size = New-Object System.Drawing.Size(270,20)
+	$label.Text = "フォントを選択してください"
+	$form.Controls.Add($label)
+
+	# OKボタンの設定
+	$OKButton = New-Object System.Windows.Forms.Button
+	$OKButton.Location = New-Object System.Drawing.Point(40,100)
+	$OKButton.Size = New-Object System.Drawing.Size(75,30)
+	$OKButton.Text = "OK"
+	$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+	$form.AcceptButton = $OKButton
+	$form.Controls.Add($OKButton)
+
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+
+	# コンボボックスを作成
+	$Combo = New-Object System.Windows.Forms.Combobox
+	$Combo.Location = New-Object System.Drawing.Point(50,50)
+	$Combo.size = New-Object System.Drawing.Size(150,30)
+	$Combo.DropDownStyle = "DropDown"
+	$Combo.FlatStyle = "standard"
+	$Combo.font = $Font
+	$Combo.BackColor = "#005050"
+	$Combo.ForeColor = "white"
+
+	# コンボボックスに項目を追加
+	ForEach ($select in $arr_font){
+		$fontname = $select.Name
+		[void] $Combo.Items.Add("$fontname")
+	}
+
+	# フォームにコンボボックスを追加
+	$form.Controls.Add($Combo)
+
+	# フォームを最前面に表示
+	$form.Topmost = $True
+
+	# フォームを表示＋選択結果を変数に格納
+	$result = $form.ShowDialog()
+
+	# 選択後、OKボタンが押された場合、選択項目を表示
+	if ($result -eq "OK")
+	{
+		$ret = $combo.Text
+	}else{
+		exit
+	}
+
+	return $ret
+}
+
 # インストールされているフォントの中からランダムにフォントを選択し、フォント名を返す処理
-function Select-Font{
+function Get-RandomFont{
 	$arr_font = [System.Drawing.FontFamily]::Families
 	$count = $arr_font.Count
 	$num_select = Get-Random -Maximum ($count - 1)
@@ -35,8 +110,17 @@ function Show_Message($text){
 	$OKButton.Backcolor = "red"
 #	$OKButton.forecolor = "white"
 
-	# フォントの設定(ランダムに設定する)
-	$font_selected = Select-Font
+	# モードの選択(ランダムor選択)
+	$mode = Read-Host "random mode: r or R , select mode: s or S"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# フォントの設定(ランダムに設定する)
+		$font_selected = Get-RandomFont
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+		# 選択式でフォントの設定を行う
+		$font_selected = Get-SelectFont
+	}else {
+		
+	}
 	Write-Host "font_selected: $font_selected"
 	$Font = New-Object System.Drawing.Font("$font_selected", 22)
 
