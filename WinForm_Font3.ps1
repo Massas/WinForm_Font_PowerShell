@@ -1,5 +1,19 @@
 
-# 
+# ランダムにsystem.drawing.colorの一色を返す処理
+function Get-RandomColor{
+	# 色名情報の配列を生成
+	$arr = [system.drawing.color]|get-member -static -MemberType Property | Select-Object Name
+	$count = $arr.Count
+
+	# 色名情報の配列の要素番号をランダムに生成
+	$select = Get-Random -Maximum ($count - 1)
+	$retcolor = $arr[$select]
+
+	return $retcolor.Name
+
+}
+
+# フォントを選択する処理
 function Get-SelectFont{
 	$arr_font = [System.Drawing.FontFamily]::Families
 
@@ -44,8 +58,14 @@ function Get-SelectFont{
 	$Combo.DropDownStyle = "DropDown"
 	$Combo.FlatStyle = "standard"
 	$Combo.font = $Font
-	$Combo.BackColor = "#005050"
-	$Combo.ForeColor = "white"
+
+	$str_BackColor = Get-RandomColor
+	Write-Host "Combo.BackColor: $str_BackColor"
+	$Combo.BackColor = $str_BackColor
+
+	$str_ForeColor = Get-RandomColor
+	Write-Host "Combo.ForeColor: $str_ForeColor"
+	$Combo.ForeColor = $str_ForeColor
 
 	# コンボボックスに項目を追加
 	ForEach ($select in $arr_font){
@@ -94,7 +114,11 @@ function Show_Message($text){
 	$form.Text = "入力内容の表示"
 	$form.Size = New-Object System.Drawing.Size(260,180)
 	$form.StartPosition = "CenterScreen"
-	$form.BackColor = "White"
+
+	$str_BackColor = Get-RandomColor
+	Write-Host "[Show_Message]str_BackColor: $str_BackColor"
+	$form.BackColor = $str_BackColor
+	
 	$form.MaximizeBox = $false
 	$form.MinimizeBox = $false
 	$form.FormBorderStyle = "FixedSingle"
@@ -107,8 +131,14 @@ function Show_Message($text){
 	$OKButton.Text = "OK"
 	$OKButton.DialogResult = "OK"
 	$OKButton.Flatstyle = "Popup"
-	$OKButton.Backcolor = "red"
-#	$OKButton.forecolor = "white"
+
+	$str_OKBackColor = Get-RandomColor
+	Write-Host "str_OKBackColor: $str_OKBackColor"
+	$OKButton.Backcolor = $str_OKBackColor
+
+	$str_OKForeColor = Get-RandomColor
+	Write-Host "str_OKForeColor: $str_OKForeColor"
+	$OKButton.forecolor = $str_OKForeColor
 
 	# モードの選択(ランダムor選択)
 	$mode = Read-Host "random mode: r or R , select mode: s or S"
@@ -129,7 +159,11 @@ function Show_Message($text){
 	$label.Location = New-Object System.Drawing.Point(10,30)
 	$label.Size = New-Object System.Drawing.Size(250,60)
 	$label.Text = $text
-	$label.forecolor = "Black"
+
+	$str_labelforeColor = Get-RandomColor
+	Write-Host "[Show_Message]str_labelBackColor: $str_labelforeColor"
+	$label.forecolor = $str_labelforeColor
+
 	$label.font = $Font
 
 	# 最前面に表示：する
@@ -169,7 +203,11 @@ function Show_WinForm() {
 	$form.Text = "入力"
 	$form.Size = New-Object System.Drawing.Size(260,180)
 	$form.StartPosition = "CenterScreen"
-	$form.BackColor = "green"
+	
+	$str_formBackColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_formBackColor: $str_formBackColor"
+	$form.BackColor = $str_formBackColor
+
 	$form.MaximizeBox = $false
 	$form.MinimizeBox = $false
 	$form.FormBorderStyle = "FixedSingle"
@@ -182,8 +220,14 @@ function Show_WinForm() {
 	$OKButton.Text = "OK"
 	$OKButton.DialogResult = "OK"
 	$OKButton.Flatstyle = "Popup"
-	$OKButton.Backcolor = "red"
-	$OKButton.forecolor = "white"
+
+	$str_OKBackColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_OKBackColor: $str_OKBackColor"
+	$OKButton.Backcolor = $str_OKBackColor
+	
+	$str_OKforeColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_OKforeColor: $str_OKforeColor"
+	$OKButton.forecolor = $str_OKforeColor
 
 	# キャンセルボタンの設定
 	$CancelButton = New-Object System.Windows.Forms.Button
@@ -192,8 +236,14 @@ function Show_WinForm() {
 	$CancelButton.Text = "Cancel"
 	$CancelButton.DialogResult = "Cancel"
 	$CancelButton.Flatstyle = "Popup"
-	$CancelButton.backcolor = "white"
-	$CancelButton.forecolor = "black"
+
+	$str_cancelBackColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_cancelBackColor: $str_cancelBackColor"
+	$CancelButton.backcolor = $str_cancelBackColor
+
+	$str_cancelForeColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_cancelForeColor: $str_cancelForeColor"
+	$CancelButton.forecolor = $str_cancelForeColor
 
 	# フォントの設定
 	$Font = New-Object System.Drawing.Font("メイリオ",11)
@@ -203,7 +253,11 @@ function Show_WinForm() {
 	$label.Location = New-Object System.Drawing.Point(10,30)
 	$label.Size = New-Object System.Drawing.Size(250,20)
 	$label.Text = "何か入力してください"
-	$label.forecolor = "white"
+
+	$str_labelBackColor = Get-RandomColor
+	Write-Host "[Show_WinForm]str_labelBackColor: $str_labelBackColor"
+	$label.forecolor = $str_labelBackColor
+
 	$label.font = $Font
 
 	# 入力ボックスの設定
