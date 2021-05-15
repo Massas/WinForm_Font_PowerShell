@@ -1,4 +1,50 @@
 
+function Get-RandomTextAlign{
+	Write-Host "Get-RandomTextAlign: START"
+
+	# ContentAlignment 列挙型の値を取得して配列に詰める
+	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
+	$count_arr = $arr.Count
+	# 配列の要素番号をランダムに取得する
+	$num_select = Get-Random -Maximum ($count_arr - 1)
+	$selected = $arr[$num_select]
+
+	Write-Host "selected: $selected"
+	Write-Host "Get-RandomTextAlign: END"
+
+	return $selected.Name
+}
+
+# Windows Formを渡して画像ファイルに変換・保存する処理
+function Convert-LabelToImage($form){
+	Write-Host "Convert-LabelToImage: START"
+
+	$formType = $form.GetType()
+	Write-Host "formType: $formType"
+	$size = $label.Size
+	$height = $size.Height
+	$width = $size.Width
+	$sizeType = $size.GetType()
+	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
+
+	$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
+	$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
+	# ラベルをBitmapに変換する
+	$form.DrawToBitmap($DstBmp, $Rect)
+
+	# 保存するファイル名を入力する
+	$savename = Read-Host "please enter filename to save as PNG" 
+	
+	try{
+		#保存する
+		$DstBmp.Save((Get-Location).Path + '\PNG\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)		
+	}catch{
+		Write-Host "Save failed."
+	}
+
+	Write-Host "Convert-LabelToImage: END"
+}
+
 # ランダムに登録されている文字列を返す処理
 function Get-RandomRegisteredStr{
 	# ファイルから内容を読込み配列に詰める
@@ -172,6 +218,9 @@ function Show_Message($text){
 	$label.Location = New-Object System.Drawing.Point(10,30)
 	$label.Size = New-Object System.Drawing.Size(250,60)
 	$label.Text = $text
+	
+	# ラベル上のテキストの配置をランダムに取得・設定する
+	$label.TextAlign = Get-RandomTextAlign
 
 	$str_labelforeColor = Get-RandomColor
 	Write-Host "[Show_Message]str_labelForeColor: $str_labelforeColor"
@@ -182,9 +231,6 @@ function Show_Message($text){
 	# 最前面に表示：する
 	$form.Topmost = $True
 
-	# 入力ボックス部分を選択した状態にする
-#	$form.Add_Shown({$textBox.Select()})
-
 	# キーとボタンの関係
 	$form.AcceptButton = $OKButton
 
@@ -194,6 +240,9 @@ function Show_Message($text){
 
 	# フォームを表示させ、その結果を受け取る
 	$result = $form.ShowDialog()
+
+	# ラベルを画像に変換して保存する処理
+	Convert-LabelToImage($label)
 
 	# 結果による処理分岐
 	if ($result -eq "OK")
