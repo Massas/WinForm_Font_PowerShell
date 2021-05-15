@@ -77,18 +77,18 @@ function Get-SelectFont{
 	$arr_font = [System.Drawing.FontFamily]::Families
 
 	# フォントの指定
-	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	$Font = New-Object System.Drawing.Font("メイリオ",30)
 	# フォーム全体の設定
 	$form = New-Object System.Windows.Forms.Form
 	$form.Text = "選択"
-	$form.Size = New-Object System.Drawing.Size(300,200)
+	$form.Size = New-Object System.Drawing.Size(500,300)
 	$form.StartPosition = "CenterScreen"
 	$form.font = $Font
 
 	# ラベルを表示
 	$label = New-Object System.Windows.Forms.Label
 	$label.Location = New-Object System.Drawing.Point(10,10)
-	$label.Size = New-Object System.Drawing.Size(270,20)
+	$label.Size = New-Object System.Drawing.Size(400,40)
 	$label.Text = "フォントを選択してください"
 	$form.Controls.Add($label)
 
@@ -171,7 +171,7 @@ function Show_Message($text){
 	# フォームの作成
 	$form = New-Object System.Windows.Forms.Form
 	$form.Text = "入力内容の表示"
-	$form.Size = New-Object System.Drawing.Size(260,180)
+	$form.Size = New-Object System.Drawing.Size(500,300)
 	$form.StartPosition = "CenterScreen"
 
 	$str_BackColor = Get-RandomColor
@@ -211,12 +211,12 @@ function Show_Message($text){
 		
 	}
 	Write-Host "font_selected: $font_selected"
-	$Font = New-Object System.Drawing.Font("$font_selected", 22)
+	$Font = New-Object System.Drawing.Font("$font_selected", 100)
 
 	# ラベルの設定
 	$label = New-Object System.Windows.Forms.Label
 	$label.Location = New-Object System.Drawing.Point(10,30)
-	$label.Size = New-Object System.Drawing.Size(250,60)
+	$label.Size = New-Object System.Drawing.Size(800,400)
 	$label.Text = $text
 	
 	# ラベル上のテキストの配置をランダムに取得・設定する
@@ -256,7 +256,7 @@ function Show_Message($text){
 }
 
 # Windows Formの表示処理
-function Show_WinForm() {
+function Show_WinForm($mode) {
 
 	Write-Host "Show_WinForm: start"
 
@@ -347,11 +347,16 @@ function Show_WinForm() {
 	# フォームを表示させ、その結果を受け取る
 	$result = $form.ShowDialog()
 
-	# 結果による処理分岐
-	if (($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
-		$x = $textBox.Text
-		Write-Host "$x"
-		Show_Message($x)
+	# モードと結果による処理分岐
+	if(($mode -eq "register") -and ($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
+		$registerStr = $textBox.Text
+		Write-Host "$registerStrを登録します"
+		# UTF-8でファイル書き込み
+		$registerStr | Add-Content $storefilename -Encoding UTF8
+	}elseif (($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
+		$registerStr = $textBox.Text
+		Write-Host "$registerStr"
+		Show_Message($registerStr)
 	}elseif($textBox.Text.Length -gt 0){
 		# メッセージボックスの表示
 		[System.Windows.Forms.MessageBox]::Show("Input is Anything")
@@ -371,7 +376,7 @@ Add-Type -AssemblyName System.Drawing
 $storefilename = "./datastore.txt"
 
 while ($true) {
-    $select = Read-Host "please enter and start. if you want to quit, please 'q' and enter. if you want to check registered str, enter 'r'"
+    $select = Read-Host "please enter and start. if you want to quit, please 'q' and enter. if you want to check registered str, enter 'r'. if want to register words, enter 's'."
     if(($select -eq 'r') -or ($select -eq 'R')){
 		# ファイルから読みだされた文字列
 		$r_storestr = $null
@@ -379,7 +384,10 @@ while ($true) {
 		$r_storestr = Get-RandomRegisteredStr $storefilename
 		# メッセージダイアログを表示する
 		Show_Message($r_storestr)		
-    }elseif(($select -ne 'q') -or ($select -ne 'Q')){
+    }elseif(($select -eq 's') -or ($select -eq 'S')){
+		$mode = "register"
+		Show_WinForm $mode
+	}elseif(($select -ne 'q') -or ($select -ne 'Q')){
         # Windows Form shows
         Show_WinForm
 	}else {
