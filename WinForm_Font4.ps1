@@ -1,6 +1,6 @@
 
 function Get-RandomTextAlign{
-	Write-Host "Get-RandomTextAlign: START"
+#	Write-Host "Get-RandomTextAlign: START"
 
 	# ContentAlignment 列挙型の値を取得して配列に詰める
 	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
@@ -9,23 +9,23 @@ function Get-RandomTextAlign{
 	$num_select = Get-Random -Maximum ($count_arr - 1)
 	$selected = $arr[$num_select]
 
-	Write-Host "selected: $selected"
-	Write-Host "Get-RandomTextAlign: END"
+#	Write-Host "selected: $selected"
+#	Write-Host "Get-RandomTextAlign: END"
 
 	return $selected.Name
 }
 
 # Windows Formを渡して画像ファイルに変換・保存する処理
 function Convert-LabelToImage($form){
-	Write-Host "Convert-LabelToImage: START"
+#	Write-Host "Convert-LabelToImage: START"
 
 	$formType = $form.GetType()
-	Write-Host "formType: $formType"
+#	Write-Host "formType: $formType"
 	$size = $label.Size
 	$height = $size.Height
 	$width = $size.Width
 	$sizeType = $size.GetType()
-	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
+#	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
 
 	$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
 	$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
@@ -37,12 +37,14 @@ function Convert-LabelToImage($form){
 	
 	try{
 		#保存する
-		$DstBmp.Save((Get-Location).Path + '\PNG\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)		
+		$DstBmp.Save((Get-Location).Path + '\WinForm_png\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)	
 	}catch{
 		Write-Host "Save failed."
+		throw ArgumentNullException
 	}
+	"savename: $savename" | Add-Content $logfilename -Encoding UTF8
 
-	Write-Host "Convert-LabelToImage: END"
+#	Write-Host "Convert-LabelToImage: END"
 }
 
 # ランダムに登録されている文字列を返す処理
@@ -68,8 +70,11 @@ function Get-RandomColor{
 	$select = Get-Random -Maximum ($count - 1)
 	$retcolor = $arr[$select]
 
-	return $retcolor.Name
+	if(($retcolor.Name -eq "Empty") -or ($retcolor.Name -eq "Transparent")){
+		Get-RandomColor
+	}
 
+	return $retcolor.Name
 }
 
 # フォントを選択する処理
@@ -77,7 +82,7 @@ function Get-SelectFont{
 	$arr_font = [System.Drawing.FontFamily]::Families
 
 	# フォントの指定
-	$Font = New-Object System.Drawing.Font("メイリオ",30)
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
 	# フォーム全体の設定
 	$form = New-Object System.Windows.Forms.Form
 	$form.Text = "選択"
@@ -113,17 +118,17 @@ function Get-SelectFont{
 	# コンボボックスを作成
 	$Combo = New-Object System.Windows.Forms.Combobox
 	$Combo.Location = New-Object System.Drawing.Point(50,50)
-	$Combo.size = New-Object System.Drawing.Size(150,30)
+	$Combo.size = New-Object System.Drawing.Size(250,40)
 	$Combo.DropDownStyle = "DropDown"
 	$Combo.FlatStyle = "standard"
 	$Combo.font = $Font
 
 	$str_BackColor = Get-RandomColor
-	Write-Host "Combo.BackColor: $str_BackColor"
+#	Write-Host "Combo.BackColor: $str_BackColor"
 	$Combo.BackColor = $str_BackColor
 
 	$str_ForeColor = Get-RandomColor
-	Write-Host "Combo.ForeColor: $str_ForeColor"
+#	Write-Host "Combo.ForeColor: $str_ForeColor"
 	$Combo.ForeColor = $str_ForeColor
 
 	# コンボボックスに項目を追加
@@ -154,19 +159,33 @@ function Get-SelectFont{
 
 # インストールされているフォントの中からランダムにフォントを選択し、フォント名を返す処理
 function Get-RandomFont{
-	$arr_font = [System.Drawing.FontFamily]::Families
-	$count = $arr_font.Count
-	$num_select = Get-Random -Maximum ($count - 1)
+	$exclude_file = "./excludeFont.txt"
+	$arr_exclude = Get-Content -LiteralPath $exclude_file -Encoding UTF8
+	$arr_font_all = [System.Drawing.FontFamily]::Families
+	$arr_font = $arr_font_all | Select-Object -ExcludeProperty $arr_exclude
 
+	$count_all = $arr_font_all.Count
+	$count = $arr_font.Count
+#	Write-Host "count_all: $count_all, count: $count"
+
+	$num_select = Get-Random -Maximum ($count - 1)
 	$ret_font = $arr_font[$num_select]
 	$ret_str = $ret_font.Name
-	Write-Host "ret_str: $ret_str"
+#	Write-Host "ret_str: $ret_str"
+
+	if($ret_font.Length -eq 0){
+		Get-RandomFont
+	}
 
 	return $ret_str
 }
 # 入力された内容を表示する
 function Show_Message($text){
-	Write-Host "Show_Message: start"
+#	Write-Host "Show_Message: start"
+	$partition = "==========================="
+	$partition | Add-Content $logfilename -Encoding UTF8
+
+	"text: $text" | Add-Content $logfilename -Encoding UTF8
 
 	# フォームの作成
 	$form = New-Object System.Windows.Forms.Form
@@ -175,8 +194,9 @@ function Show_Message($text){
 	$form.StartPosition = "CenterScreen"
 
 	$str_BackColor = Get-RandomColor
-	Write-Host "[Show_Message]str_BackColor: $str_BackColor"
+#	Write-Host "[Show_Message]str_BackColor: $str_BackColor"
 	$form.BackColor = $str_BackColor
+	"backColor: $str_BackColor" | Add-Content $logfilename -Encoding UTF8
 	
 	$form.MaximizeBox = $false
 	$form.MinimizeBox = $false
@@ -192,13 +212,22 @@ function Show_Message($text){
 	$OKButton.Flatstyle = "Popup"
 
 	$str_OKBackColor = Get-RandomColor
-	Write-Host "str_OKBackColor: $str_OKBackColor"
+#	Write-Host "str_OKBackColor: $str_OKBackColor"
 	$OKButton.Backcolor = $str_OKBackColor
 
 	$str_OKForeColor = Get-RandomColor
-	Write-Host "str_OKForeColor: $str_OKForeColor"
+#	Write-Host "str_OKForeColor: $str_OKForeColor"
 	$OKButton.forecolor = $str_OKForeColor
 
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+	
 	# モードの選択(ランダムor選択)
 	$mode = Read-Host "random mode: r or R , select mode: s or S"
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
@@ -212,6 +241,7 @@ function Show_Message($text){
 	}
 	Write-Host "font_selected: $font_selected"
 	$Font = New-Object System.Drawing.Font("$font_selected", 100)
+	"font_selected: $font_selected" | Add-Content $logfilename -Encoding UTF8
 
 	# ラベルの設定
 	$label = New-Object System.Windows.Forms.Label
@@ -221,10 +251,13 @@ function Show_Message($text){
 	
 	# ラベル上のテキストの配置をランダムに取得・設定する
 	$label.TextAlign = Get-RandomTextAlign
+	$TextAlign = $label.TextAlign
+	"TextAlign: $TextAlign" | Add-Content $logfilename -Encoding UTF8
 
 	$str_labelforeColor = Get-RandomColor
-	Write-Host "[Show_Message]str_labelForeColor: $str_labelforeColor"
+#	Write-Host "[Show_Message]str_labelForeColor: $str_labelforeColor"
 	$label.forecolor = $str_labelforeColor
+	"strColor: $str_labelforeColor" | Add-Content $logfilename -Encoding UTF8
 
 	$label.font = $Font
 
@@ -247,18 +280,17 @@ function Show_Message($text){
 	# 結果による処理分岐
 	if ($result -eq "OK")
 	{
-		$x = $label.Text
-		Write-Host "$x"
-		Write-Host "Show_Message: end"
-
-		return 0
+#		$x = $label.Text
+#		Write-Host "$x"
+#		Write-Host "Show_Message: end"
+		return
 	}
 }
 
 # Windows Formの表示処理
 function Show_WinForm($mode) {
 
-	Write-Host "Show_WinForm: start"
+#	Write-Host "Show_WinForm: start"
 
 	# フォームの作成
 	$form = New-Object System.Windows.Forms.Form
@@ -267,7 +299,7 @@ function Show_WinForm($mode) {
 	$form.StartPosition = "CenterScreen"
 	
 	$str_formBackColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_formBackColor: $str_formBackColor"
+#	Write-Host "[Show_WinForm]str_formBackColor: $str_formBackColor"
 	$form.BackColor = $str_formBackColor
 
 	$form.MaximizeBox = $false
@@ -284,11 +316,11 @@ function Show_WinForm($mode) {
 	$OKButton.Flatstyle = "Popup"
 
 	$str_OKBackColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_OKBackColor: $str_OKBackColor"
+#	Write-Host "[Show_WinForm]str_OKBackColor: $str_OKBackColor"
 	$OKButton.Backcolor = $str_OKBackColor
 	
 	$str_OKforeColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_OKforeColor: $str_OKforeColor"
+#	Write-Host "[Show_WinForm]str_OKforeColor: $str_OKforeColor"
 	$OKButton.forecolor = $str_OKforeColor
 
 	# キャンセルボタンの設定
@@ -300,11 +332,11 @@ function Show_WinForm($mode) {
 	$CancelButton.Flatstyle = "Popup"
 
 	$str_cancelBackColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_cancelBackColor: $str_cancelBackColor"
+#	Write-Host "[Show_WinForm]str_cancelBackColor: $str_cancelBackColor"
 	$CancelButton.backcolor = $str_cancelBackColor
 
 	$str_cancelForeColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_cancelForeColor: $str_cancelForeColor"
+#	Write-Host "[Show_WinForm]str_cancelForeColor: $str_cancelForeColor"
 	$CancelButton.forecolor = $str_cancelForeColor
 
 	# フォントの設定
@@ -317,7 +349,7 @@ function Show_WinForm($mode) {
 	$label.Text = "何か入力してください"
 
 	$str_labelBackColor = Get-RandomColor
-	Write-Host "[Show_WinForm]str_labelBackColor: $str_labelBackColor"
+#	Write-Host "[Show_WinForm]str_labelBackColor: $str_labelBackColor"
 	$label.forecolor = $str_labelBackColor
 
 	$label.font = $Font
@@ -362,7 +394,7 @@ function Show_WinForm($mode) {
 		[System.Windows.Forms.MessageBox]::Show("Input is Anything")
 	}
 
-	Write-Host "Show_WinForm: end"
+#	Write-Host "Show_WinForm: end"
 
 }
 
@@ -374,6 +406,8 @@ Add-Type -AssemblyName System.Drawing
 
 # 文字列データを登録・保持しておくためのファイル
 $storefilename = "./datastore.txt"
+# ログファイル
+$logfilename = "./logfile.log"
 
 while ($true) {
     $select = Read-Host "please enter and start. if you want to quit, please 'q' and enter. if you want to check registered str, enter 'r'. if want to register words, enter 's'."
