@@ -19,12 +19,12 @@ function Get-RandomTextAlign{
 function Convert-LabelToImage($form){
 #	Write-Host "Convert-LabelToImage: START"
 
-	$formType = $form.GetType()
+#	$formType = $form.GetType()
 #	Write-Host "formType: $formType"
 	$size = $label.Size
 	$height = $size.Height
 	$width = $size.Width
-	$sizeType = $size.GetType()
+#	$sizeType = $size.GetType()
 #	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
 
 	$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
@@ -55,7 +55,7 @@ function Get-RandomRegisteredStr{
 	# 配列の要素番号をランダムに取得する
 	$num_select = Get-Random -Maximum ($count_arr - 1)
 	$selectstr = $arr_file[$num_select]
-	Write-Host "selectstr: $selectstr , count_arr: $count_arr, num_select: $num_select"
+	Write-Host "[Get-RandomRegisteredStr]selectstr: $selectstr num_all: $count_arr ,num_select: $num_select"
 
 	return $selectstr
 }
@@ -160,18 +160,32 @@ function Get-SelectFont{
 # インストールされているフォントの中からランダムにフォントを選択し、フォント名を返す処理
 function Get-RandomFont{
 	$exclude_file = "./excludeFont.txt"
-	$arr_exclude = Get-Content -LiteralPath $exclude_file -Encoding UTF8
+	$excludes = Get-Content -LiteralPath $exclude_file -Encoding UTF8
+	Write-Host $excludes.Count
+#	Write-Host arr_exclude: $arr_exclude count: $arr_exclude.Count
+	
 	$arr_font_all = [System.Drawing.FontFamily]::Families
-	$arr_font = $arr_font_all | Select-Object -ExcludeProperty $arr_exclude
+
+	$arr_font = @()
+	foreach($font in $arr_font_all){
+		if($excludes -contains $font.Name){
+			continue
+		}
+#		Write-Host $font.Name
+		$arr_font += $font
+	}
+#	$arr_font = $arr_font_all | Select-Object -ExcludeProperty $arr_exclude 
 
 	$count_all = $arr_font_all.Count
 	$count = $arr_font.Count
-#	Write-Host "count_all: $count_all, count: $count"
+	Write-Host "[Get-RandomFont]count_all: $count_all, count: $count"
+#	Write-Host "arr_font: $arr_font"
 
 	$num_select = Get-Random -Maximum ($count - 1)
+	Write-Host "num_select: $num_select"
 	$ret_font = $arr_font[$num_select]
 	$ret_str = $ret_font.Name
-#	Write-Host "ret_str: $ret_str"
+	Write-Host "ret_str: $ret_str"
 
 	if($ret_font.Length -eq 0){
 		Get-RandomFont
@@ -179,6 +193,7 @@ function Get-RandomFont{
 
 	return $ret_str
 }
+
 # 入力された内容を表示する
 function Show_Message($text){
 #	Write-Host "Show_Message: start"
