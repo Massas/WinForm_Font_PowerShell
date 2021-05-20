@@ -2,3 +2,31 @@
 Corbel Light
 HG創英ﾌﾟﾚｾﾞﾝｽEB
 ＭＳ 明朝
+Gigi
+UD デジタル 教科書体 N-B
+游ゴシック Light
+HGS教科書体
+Kristen ITC
+UD デジタル 教科書体 N-R
+Nirmala UI Semilight
+Calibri Light
+Microsoft YaHei UI Light
+Leelawadee UI Semilight
+BIZ UDPゴシック
+Comic Sans MS
+HGｺﾞｼｯｸE
+Blackadder ITC
+Yu Gothic UI Semilight
+Yu Gothic UI Semibold
+HGP明朝B
+HGSｺﾞｼｯｸM
+HGS創英ﾌﾟﾚｾﾞﾝｽEB
+SimSun
+Microsoft New Tai Lue
+Tempus Sans ITC
+HG創英角ﾎﾟｯﾌﾟ体
+Arial Narrow
+Bahnschrift
+Berlin Sans FB
+Betterworks Swashes
+BIZ UDゴシック

@@ -70,7 +70,8 @@ function Get-RandomColor{
 	$select = Get-Random -Maximum ($count - 1)
 	$retcolor = $arr[$select]
 
-	if(($retcolor.Name -eq "Empty") -or ($retcolor.Name -eq "Transparent")){
+	if(($retcolor.Name -eq "Empty") -or ($retcolor.Name -match "Transparent")){
+		Write-Host $retcolor.Name
 		Get-RandomColor
 	}
 
@@ -227,11 +228,11 @@ function Show_Message($text){
 	$OKButton.Flatstyle = "Popup"
 
 	$str_OKBackColor = Get-RandomColor
-	Write-Host "str_OKBackColor: $str_OKBackColor"
+#	Write-Host "str_OKBackColor: $str_OKBackColor"
 	$OKButton.Backcolor = $str_OKBackColor
 
 	$str_OKForeColor = Get-RandomColor
-	Write-Host "str_OKForeColor: $str_OKForeColor"
+#	Write-Host "str_OKForeColor: $str_OKForeColor"
 	$OKButton.forecolor = $str_OKForeColor
 
 	# キャンセルボタンの設定
