@@ -59,22 +59,117 @@ function Get-RandomRegisteredStr{
 
 	return $selectstr
 }
+function Get-SelectRegisteredStr{
+	$arr_str_all = Get-Content -LiteralPath $storefilename -Encoding UTF8
+
+	# フォントの指定
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	# フォーム全体の設定
+	$form = New-Object System.Windows.Forms.Form
+	$form.Text = "選択"
+	$form.Size = New-Object System.Drawing.Size(600,450)
+	$form.StartPosition = "CenterScreen"
+	$form.font = $Font
+
+	# ラベルを表示
+	$label = New-Object System.Windows.Forms.Label
+	$label.Location = New-Object System.Drawing.Point(10,10)
+	$label.Size = New-Object System.Drawing.Size(500,40)
+	$label.Text = "文字列を選択してください"
+	$form.Controls.Add($label)
+
+	# OKボタンの設定
+	$OKButton = New-Object System.Windows.Forms.Button
+	$OKButton.Location = New-Object System.Drawing.Point(40,100)
+	$OKButton.Size = New-Object System.Drawing.Size(75,30)
+	$OKButton.Text = "OK"
+	$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+	$form.AcceptButton = $OKButton
+	$form.Controls.Add($OKButton)
+
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+
+	# コンボボックスを作成
+	$Combo = New-Object System.Windows.Forms.Combobox
+	$Combo.Location = New-Object System.Drawing.Point(50,50)
+	$Combo.size = New-Object System.Drawing.Size(500,60)
+	$Combo.DropDownStyle = "DropDown"
+	$Combo.FlatStyle = "standard"
+	$Combo.font = $Font
+
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.BackColor: $str_BackColor"
+	$Combo.BackColor = $str_BackColor
+
+	while ($true) {
+		$str_ForeColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.ForeColor: $str_ForeColor"
+	$Combo.ForeColor = $str_ForeColor
+
+	# コンボボックスに項目を追加
+	ForEach ($select in $arr_str_all){
+		[void] $Combo.Items.Add("$select")
+	}
+
+	# フォームにコンボボックスを追加
+	$form.Controls.Add($Combo)
+
+	# フォームを最前面に表示
+	$form.Topmost = $True
+
+	# フォームを表示＋選択結果を変数に格納
+	$result = $form.ShowDialog()
+
+	# 選択後、OKボタンが押された場合、選択項目を表示
+	if ($result -eq "OK")
+	{
+		$ret = $combo.Text
+		Write-Host "[Get-RandomRegisteredStr]selectstr: $ret"
+	}else{
+		exit
+	}
+
+	return $ret
+}
 
 # ランダムにsystem.drawing.colorの一色を返す処理
 function Get-RandomColor{
+
+	$arr_color = @()
+
 	# 色名情報の配列を生成
-	$arr = [system.drawing.color]|get-member -static -MemberType Property | Select-Object Name
-	$count = $arr.Count
+	$arr_all = [system.drawing.color]|get-member -static -MemberType Property | Select-Object Name
+
+	foreach($color in $arr_all){
+		if($color.Name -eq "Empty"){
+				continue
+		}
+#		Write-Host $font.Name
+		$arr_color += $color
+	}
+	$count = $arr_color.Count
 
 	# 色名情報の配列の要素番号をランダムに生成
 	$select = Get-Random -Maximum ($count - 1)
-	$retcolor = $arr[$select]
+	$retcolor = $arr_color[$select]
 
-	if(($retcolor.Name -eq "Empty") -or ($retcolor.Name -match "Transparent")){
-		Write-Host $retcolor.Name
-		Get-RandomColor
-	}
-
+	Write-Host $retcolor.Name
 	return $retcolor.Name
 }
 
@@ -87,7 +182,7 @@ function Get-SelectFont{
 	# フォーム全体の設定
 	$form = New-Object System.Windows.Forms.Form
 	$form.Text = "選択"
-	$form.Size = New-Object System.Drawing.Size(500,300)
+	$form.Size = New-Object System.Drawing.Size(600,450)
 	$form.StartPosition = "CenterScreen"
 	$form.font = $Font
 
@@ -124,7 +219,12 @@ function Get-SelectFont{
 	$Combo.FlatStyle = "standard"
 	$Combo.font = $Font
 
-	$str_BackColor = Get-RandomColor
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
 #	Write-Host "Combo.BackColor: $str_BackColor"
 	$Combo.BackColor = $str_BackColor
 
@@ -209,7 +309,12 @@ function Show_Message($text){
 	$form.Size = New-Object System.Drawing.Size(900,500)
 	$form.StartPosition = "CenterScreen"
 
-	$str_BackColor = Get-RandomColor
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
 #	Write-Host "[Show_Message]str_BackColor: $str_BackColor"
 	$form.BackColor = $str_BackColor
 	"backColor: $str_BackColor" | Add-Content $logfilename -Encoding UTF8
@@ -227,8 +332,13 @@ function Show_Message($text){
 	$OKButton.DialogResult = "OK"
 	$OKButton.Flatstyle = "Popup"
 
-	$str_OKBackColor = Get-RandomColor
-#	Write-Host "str_OKBackColor: $str_OKBackColor"
+	while ($true) {
+		$str_OKBackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+	#	Write-Host "str_OKBackColor: $str_OKBackColor"
 	$OKButton.Backcolor = $str_OKBackColor
 
 	$str_OKForeColor = Get-RandomColor
@@ -245,7 +355,7 @@ function Show_Message($text){
 	$form.Controls.Add($CancelButton)
 	
 	# モードの選択(ランダムor選択)
-	$mode = Read-Host "random mode: r or R , select mode: s or S"
+	$mode = Read-Host "Font random mode: r or R , select mode: s or S"
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
 		# フォントの設定(ランダムに設定する)
 		$font_selected = Get-RandomFont
@@ -260,7 +370,7 @@ function Show_Message($text){
 	# ラベルの設定
 	$label = New-Object System.Windows.Forms.Label
 	$label.Location = New-Object System.Drawing.Point(10,30)
-	$label.Size = New-Object System.Drawing.Size(800,450)
+	$label.Size = New-Object System.Drawing.Size(800,600)
 	$label.Text = $text
 	
 	# ラベル上のテキストの配置をランダムに取得・設定する
@@ -311,8 +421,13 @@ function Show_WinForm($mode) {
 	$form.Size = New-Object System.Drawing.Size(260,180)
 	$form.StartPosition = "CenterScreen"
 	
-	$str_formBackColor = Get-RandomColor
-#	Write-Host "[Show_WinForm]str_formBackColor: $str_formBackColor"
+	while ($true) {
+		$str_formBackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+	#	Write-Host "[Show_WinForm]str_formBackColor: $str_formBackColor"
 	$form.BackColor = $str_formBackColor
 
 	$form.MaximizeBox = $false
@@ -328,7 +443,12 @@ function Show_WinForm($mode) {
 	$OKButton.DialogResult = "OK"
 	$OKButton.Flatstyle = "Popup"
 
-	$str_OKBackColor = Get-RandomColor
+	while ($true) {
+		$str_OKBackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
 #	Write-Host "[Show_WinForm]str_OKBackColor: $str_OKBackColor"
 	$OKButton.Backcolor = $str_OKBackColor
 	
@@ -344,8 +464,13 @@ function Show_WinForm($mode) {
 	$CancelButton.DialogResult = "Cancel"
 	$CancelButton.Flatstyle = "Popup"
 
-	$str_cancelBackColor = Get-RandomColor
-#	Write-Host "[Show_WinForm]str_cancelBackColor: $str_cancelBackColor"
+	while ($true) {
+		$str_cancelBackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+	#	Write-Host "[Show_WinForm]str_cancelBackColor: $str_cancelBackColor"
 	$CancelButton.backcolor = $str_cancelBackColor
 
 	$str_cancelForeColor = Get-RandomColor
@@ -361,7 +486,12 @@ function Show_WinForm($mode) {
 	$label.Size = New-Object System.Drawing.Size(250,20)
 	$label.Text = "何か入力してください"
 
-	$str_labelBackColor = Get-RandomColor
+	while ($true) {
+		$str_labelBackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
 #	Write-Host "[Show_WinForm]str_labelBackColor: $str_labelBackColor"
 	$label.forecolor = $str_labelBackColor
 
@@ -427,8 +557,16 @@ while ($true) {
     if(($select -eq 'r') -or ($select -eq 'R')){
 		# ファイルから読みだされた文字列
 		$r_storestr = $null
-		# ファイルから文字列をランダムに読み出す
-		$r_storestr = Get-RandomRegisteredStr $storefilename
+
+		$mode = Read-Host "Str random mode: r or R , select mode: s or S"
+		if(($mode -eq 'r') -or ($mode -eq 'R')){
+			# ファイルから文字列をランダムに読み出す
+			$r_storestr = Get-RandomRegisteredStr $storefilename
+		}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+			# 選択式で文字列の設定を行う
+			$r_storestr = Get-SelectRegisteredStr
+		}
+	
 		# メッセージダイアログを表示する
 		Show_Message($r_storestr)		
     }elseif(($select -eq 's') -or ($select -eq 'S')){

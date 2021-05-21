@@ -30,3 +30,21 @@ Bahnschrift
 Berlin Sans FB
 Betterworks Swashes
 BIZ UDゴシック
+BIZ UD明朝 Medium
+Cascadia Code Light
+Cascadia Code SemiBold
+Cascadia Code ExtraLight
+Cascadia Code
+Cascadia Code SemiLight
+Cascadia Mono
+Cascadia Mono ExtraLight
+Cascadia Mono Light
+Cascadia Mono SemiBold
+Cascadia Mono SemiLight
+Comic Sans MS
+Consolas
+Corbel
+Dubai Medium
+Franklin Gothic Book
+UD デジタル 教科書体 NP-R
+Gigi
