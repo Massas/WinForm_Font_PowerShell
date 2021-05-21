@@ -47,6 +47,111 @@ function Convert-LabelToImage($form){
 #	Write-Host "Convert-LabelToImage: END"
 }
 
+# ランダムにラベルのサイズを返す処理
+function Get-RandomLabelSize{
+	$sizefilename = "./sizefile.txt"
+	# ファイルから内容を読込み配列に詰める
+	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
+	$count_arr = $arr_size.Count
+	# 配列の要素番号をランダムに取得する
+	$num_select = Get-Random -Maximum ($count_arr - 1)
+	$selectsize = $arr_size[$num_select]
+	Write-Host "[Get-RandomLabelSize]selectsize: $selectsize num_all: $count_arr ,num_select: $num_select"
+
+	return $selectsize
+}
+
+function Get-SelectLabelSize{
+	$sizefilename = "./sizefile.txt"
+	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
+
+	# フォントの指定
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	# フォーム全体の設定
+	$form = New-Object System.Windows.Forms.Form
+	$form.Text = "選択"
+	$form.Size = New-Object System.Drawing.Size(600,450)
+	$form.StartPosition = "CenterScreen"
+	$form.font = $Font
+
+	# ラベルを表示
+	$label = New-Object System.Windows.Forms.Label
+	$label.Location = New-Object System.Drawing.Point(10,10)
+	$label.Size = New-Object System.Drawing.Size(500,40)
+	$label.Text = "サイズを選択してください"
+	$form.Controls.Add($label)
+
+	# OKボタンの設定
+	$OKButton = New-Object System.Windows.Forms.Button
+	$OKButton.Location = New-Object System.Drawing.Point(40,100)
+	$OKButton.Size = New-Object System.Drawing.Size(75,30)
+	$OKButton.Text = "OK"
+	$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+	$form.AcceptButton = $OKButton
+	$form.Controls.Add($OKButton)
+
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+
+	# コンボボックスを作成
+	$Combo = New-Object System.Windows.Forms.Combobox
+	$Combo.Location = New-Object System.Drawing.Point(50,50)
+	$Combo.size = New-Object System.Drawing.Size(500,60)
+	$Combo.DropDownStyle = "DropDown"
+	$Combo.FlatStyle = "standard"
+	$Combo.font = $Font
+
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.BackColor: $str_BackColor"
+	$Combo.BackColor = $str_BackColor
+
+	while ($true) {
+		$str_ForeColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.ForeColor: $str_ForeColor"
+	$Combo.ForeColor = $str_ForeColor
+
+	# コンボボックスに項目を追加
+	ForEach ($select in $arr_size){
+		[void] $Combo.Items.Add("$select")
+	}
+
+	# フォームにコンボボックスを追加
+	$form.Controls.Add($Combo)
+
+	# フォームを最前面に表示
+	$form.Topmost = $True
+
+	# フォームを表示＋選択結果を変数に格納
+	$result = $form.ShowDialog()
+
+	# 選択後、OKボタンが押された場合、選択項目を表示
+	if ($result -eq "OK")
+	{
+		$ret = $combo.Text
+		Write-Host "[Get-SelectLabelSize]selectsize: $ret"
+	}else{
+		exit
+	}
+
+	return $ret
+}
+
+
 # ランダムに登録されている文字列を返す処理
 function Get-RandomRegisteredStr{
 	# ファイルから内容を読込み配列に詰める
@@ -370,7 +475,23 @@ function Show_Message($text){
 	# ラベルの設定
 	$label = New-Object System.Windows.Forms.Label
 	$label.Location = New-Object System.Drawing.Point(10,30)
-	$label.Size = New-Object System.Drawing.Size(800,600)
+	# ラベルのサイズ。保存する画像のサイズとなる。
+	$mode = Read-Host "Label size random mode: r or R , select mode: s or S"
+	$size_selected = @()
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# ラベルのサイズをランダムに設定する
+		$size_selected = Get-RandomLabelSize
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+		# 選択式でラベルのサイズ設定を行う
+		$size_selected = Get-SelectLabelSize
+	}
+	$arr_size_int = $size_selected -split(",")
+	$width = [int]$arr_size_int[0]
+	$height = [int]$arr_size_int[1]
+	Write-Host size_selected: $size_selected Type: $size_selected.GetType() 
+	Write-Host "width: $width, height: $height"
+	$label.Size = New-Object System.Drawing.Size($width,$height)
+#	$label.Size = New-Object System.Drawing.Size(800,600)
 	$label.Text = $text
 	
 	# ラベル上のテキストの配置をランダムに取得・設定する
