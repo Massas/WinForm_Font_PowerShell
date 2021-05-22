@@ -54,7 +54,7 @@ function Get-RandomLabelSize{
 	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
 	$count_arr = $arr_size.Count
 	# 配列の要素番号をランダムに取得する
-	$num_select = Get-Random -Maximum ($count_arr - 1)
+	$num_select = Get-Random -Maximum ($count_arr - 1) -Minimum 0
 	$selectsize = $arr_size[$num_select]
 	Write-Host "[Get-RandomLabelSize]selectsize: $selectsize num_all: $count_arr ,num_select: $num_select"
 
@@ -337,8 +337,21 @@ function Get-SelectFont{
 #	Write-Host "Combo.ForeColor: $str_ForeColor"
 	$Combo.ForeColor = $str_ForeColor
 
+	$exclude_file = "./excludeFont.txt"
+	$excludes = Get-Content -LiteralPath $exclude_file -Encoding UTF8
+
+	# excludeファイルにあるものを除外する
+	$arr = @()
+	foreach($font in $arr_font){
+		if($excludes -contains $font.Name){
+			continue
+		}
+#		Write-Host $font.Name
+		$arr += $font
+	}
+
 	# コンボボックスに項目を追加
-	ForEach ($select in $arr_font){
+	ForEach ($select in $arr){
 		$fontname = $select.Name
 		[void] $Combo.Items.Add("$fontname")
 	}
