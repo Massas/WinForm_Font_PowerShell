@@ -1,6 +1,5 @@
 # ランダムに画像を取得し返す処理
 function Get-RandomSourceImg{
-	Write-Host "Get-RandomSourceImg: START"
 	# ファイル名の一覧を取得し配列に詰める
 	$arr = Get-ChildItem -Path ./source_img -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
 
@@ -14,8 +13,6 @@ function Get-RandomSourceImg{
 
 	# 画像を取得する
 	$img = [System.Drawing.Image]::FromFile($fullpath)
-
-	Write-Host "Get-RandomSourceImg: END"
 
 	return $img
 }
@@ -264,13 +261,105 @@ function Get-RandomTextAlign{
 	# 配列の要素番号をランダムに取得する
 	$num_select = Get-Random -Maximum ($count_arr - 1)
 	$selected = $arr[$num_select]
+	$ret = $selected.Name
 
-#	Write-Host "selected: $selected"
-#	Write-Host "Get-RandomTextAlign: END"
+	Write-Host "[Get-RandomTextAlign]TextAlign: $ret"
+	"TextAlign: $ret" | Add-Content $logfilename -Encoding UTF8
 
-	return $selected.Name
+	return $ret
 }
 
+# ラベルのサイズを選択して返す処理
+function Get-SelectTextAlign{
+	# ContentAlignment 列挙型の値を取得して配列に詰める
+	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
+
+	# フォントの指定
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	# フォーム全体の設定
+	$form = New-Object System.Windows.Forms.Form
+	$form.Text = "選択"
+	$form.Size = New-Object System.Drawing.Size(600,450)
+	$form.StartPosition = "CenterScreen"
+	$form.font = $Font
+
+	# ラベルを表示
+	$label = New-Object System.Windows.Forms.Label
+	$label.Location = New-Object System.Drawing.Point(10,10)
+	$label.Size = New-Object System.Drawing.Size(500,40)
+	$label.Text = "テキストの配置を選択してください"
+	$form.Controls.Add($label)
+
+	# OKボタンの設定
+	$OKButton = New-Object System.Windows.Forms.Button
+	$OKButton.Location = New-Object System.Drawing.Point(40,100)
+	$OKButton.Size = New-Object System.Drawing.Size(75,30)
+	$OKButton.Text = "OK"
+	$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+	$form.AcceptButton = $OKButton
+	$form.Controls.Add($OKButton)
+
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+
+	# コンボボックスを作成
+	$Combo = New-Object System.Windows.Forms.Combobox
+	$Combo.Location = New-Object System.Drawing.Point(50,50)
+	$Combo.size = New-Object System.Drawing.Size(500,60)
+	$Combo.DropDownStyle = "DropDown"
+	$Combo.FlatStyle = "standard"
+	$Combo.font = $Font
+
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.BackColor: $str_BackColor"
+	$Combo.BackColor = $str_BackColor
+
+	while ($true) {
+		$str_ForeColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.ForeColor: $str_ForeColor"
+	$Combo.ForeColor = $str_ForeColor
+
+	# コンボボックスに項目を追加
+	ForEach ($select in $arr){
+		[void] $Combo.Items.Add($select.Name)
+	}
+
+	# フォームにコンボボックスを追加
+	$form.Controls.Add($Combo)
+
+	# フォームを最前面に表示
+	$form.Topmost = $True
+
+	# フォームを表示＋選択結果を変数に格納
+	$result = $form.ShowDialog()
+
+	# 選択後、OKボタンが押された場合、選択項目を表示
+	if ($result -eq "OK")
+	{
+		$ret = $combo.Text
+		Write-Host [Get-SelectTextAlign]TextAlign: $ret
+		"TextAlign: $ret" | Add-Content $logfilename -Encoding UTF8
+	}else{
+		exit
+	}
+
+	return $ret
+}
 
 # ランダムに登録されている文字列を返す処理
 function Get-RandomRegisteredStr{
@@ -628,9 +717,18 @@ function Show_Message($text){
 	$label.Size = New-Object System.Drawing.Size($width,$height)
 #	$label.Size = New-Object System.Drawing.Size(800,600)
 	$label.Text = $text
-	
-	# ラベル上のテキストの配置をランダムに取得・設定する
-	$label.TextAlign = Get-RandomTextAlign
+
+	# テキストの配置を設定する
+	$mode = Read-Host "TextAlign random mode: r or R , select mode: s or S"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# ラベル上のテキストの配置をランダムに取得・設定する
+		$label.TextAlign = Get-RandomTextAlign
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+		# ラベル上のテキストの配置を選択し設定する
+		$textalign = Get-SelectTextAlign
+		$label.TextAlign = $textalign
+	}
+
 	$TextAlign = $label.TextAlign
 	"TextAlign: $TextAlign" | Add-Content $logfilename -Encoding UTF8
 
@@ -645,9 +743,16 @@ function Show_Message($text){
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
 		# 画像をランダムに設定する
 		$label.Image = Get-RandomSourceImg
+#		$str_img = $output
+#		"image: $str_img" | Add-Content $logfilename -Encoding UTF8
 	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
 		# 選択式で画像の設定を行う
 		$label.Image = Get-SelectSourceImg
+#		$str_img = $label.Image
+#		"image: $str_img" | Add-Content $logfilename -Encoding UTF8
+	}else{
+#		$str_img = $label.Image
+#		"image: $str_img" | Add-Content $logfilename -Encoding UTF8
 	}
 
 	# 最前面に表示：する
