@@ -1,52 +1,154 @@
+# ランダムに画像を取得し返す処理
+function Get-RandomSourceImg{
+	Write-Host "Get-RandomSourceImg: START"
+	# ファイル名の一覧を取得し配列に詰める
+	$arr = Get-ChildItem -Path ./source_img -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
 
-function Get-RandomTextAlign{
-#	Write-Host "Get-RandomTextAlign: START"
-
-	# ContentAlignment 列挙型の値を取得して配列に詰める
-	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
 	$count_arr = $arr.Count
 	# 配列の要素番号をランダムに取得する
 	$num_select = Get-Random -Maximum ($count_arr - 1)
 	$selected = $arr[$num_select]
 
-#	Write-Host "selected: $selected"
-#	Write-Host "Get-RandomTextAlign: END"
+	$fullpath = $sourceImgDir + $selected
+	Write-Host "selected: $selected, fullpath: $fullpath"
 
-	return $selected.Name
+	# 画像を取得する
+	$img = [System.Drawing.Image]::FromFile($fullpath)
+
+	Write-Host "Get-RandomSourceImg: END"
+
+	return $img
+}
+
+# 画像を選択して返す処理
+function Get-SelectSourceImg{
+	# ファイル名の一覧を取得し配列に詰める
+	$arr = Get-ChildItem -Path ./source_img -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
+
+	# フォントの指定
+	$Font = New-Object System.Drawing.Font("メイリオ",12)
+	# フォーム全体の設定
+	$form = New-Object System.Windows.Forms.Form
+	$form.Text = "選択"
+	$form.Size = New-Object System.Drawing.Size(600,450)
+	$form.StartPosition = "CenterScreen"
+	$form.font = $Font
+
+	# ラベルを表示
+	$label = New-Object System.Windows.Forms.Label
+	$label.Location = New-Object System.Drawing.Point(10,10)
+	$label.Size = New-Object System.Drawing.Size(500,40)
+	$label.Text = "画像を選択してください"
+	$form.Controls.Add($label)
+
+	# OKボタンの設定
+	$OKButton = New-Object System.Windows.Forms.Button
+	$OKButton.Location = New-Object System.Drawing.Point(40,100)
+	$OKButton.Size = New-Object System.Drawing.Size(75,30)
+	$OKButton.Text = "OK"
+	$OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+	$form.AcceptButton = $OKButton
+	$form.Controls.Add($OKButton)
+
+	# キャンセルボタンの設定
+	$CancelButton = New-Object System.Windows.Forms.Button
+	$CancelButton.Location = New-Object System.Drawing.Point(130,100)
+	$CancelButton.Size = New-Object System.Drawing.Size(75,30)
+	$CancelButton.Text = "Cancel"
+	$CancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+	$form.CancelButton = $CancelButton
+	$form.Controls.Add($CancelButton)
+
+	# コンボボックスを作成
+	$Combo = New-Object System.Windows.Forms.Combobox
+	$Combo.Location = New-Object System.Drawing.Point(50,50)
+	$Combo.size = New-Object System.Drawing.Size(500,60)
+	$Combo.DropDownStyle = "DropDown"
+	$Combo.FlatStyle = "standard"
+	$Combo.font = $Font
+
+	while ($true) {
+		$str_BackColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.BackColor: $str_BackColor"
+	$Combo.BackColor = $str_BackColor
+
+	while ($true) {
+		$str_ForeColor = Get-RandomColor
+		if ($str_BackColor -ne "Transparent") {
+			break
+		}		
+	}
+#	Write-Host "Combo.ForeColor: $str_ForeColor"
+	$Combo.ForeColor = $str_ForeColor
+
+	# コンボボックスに項目を追加
+	ForEach ($select in $arr){
+		[void] $Combo.Items.Add("$select")
+	}
+
+	# フォームにコンボボックスを追加
+	$form.Controls.Add($Combo)
+
+	# フォームを最前面に表示
+	$form.Topmost = $True
+
+	# フォームを表示＋選択結果を変数に格納
+	$result = $form.ShowDialog()
+
+	# 選択後、OKボタンが押された場合、選択項目を表示
+	if ($result -eq "OK")
+	{
+		$ret = $combo.Text
+		Write-Host "[Get-SelectSourceImg]selectsize: $ret"
+	}else{
+		exit
+	}
+
+	$fullpath = $sourceImgDir + $ret
+	Write-Host "selected: $ret, fullpath: $fullpath"
+
+	# 画像を取得する
+	$img = [System.Drawing.Image]::FromFile($fullpath)
+
+	return $img
 }
 
 # Windows Formを渡して画像ファイルに変換・保存する処理
 function Convert-LabelToImage($form){
-#	Write-Host "Convert-LabelToImage: START"
-
-#	$formType = $form.GetType()
-#	Write-Host "formType: $formType"
-	$size = $label.Size
-	$height = $size.Height
-	$width = $size.Width
-#	$sizeType = $size.GetType()
-#	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
-
-	$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
-	$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
-	# ラベルをBitmapに変換する
-	$form.DrawToBitmap($DstBmp, $Rect)
-
-	# 保存するファイル名を入力する
-	$savename = Read-Host "please enter filename to save as PNG" 
+	#	Write-Host "Convert-LabelToImage: START"
 	
-	try{
-		#保存する
-		$DstBmp.Save((Get-Location).Path + '\WinForm_png\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)	
-	}catch{
-		Write-Host "Save failed."
-		throw ArgumentNullException
+	#	$formType = $form.GetType()
+	#	Write-Host "formType: $formType"
+		$size = $label.Size
+		$height = $size.Height
+		$width = $size.Width
+	#	$sizeType = $size.GetType()
+	#	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
+	
+		$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
+		$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
+		# ラベルをBitmapに変換する
+		$form.DrawToBitmap($DstBmp, $Rect)
+	
+		# 保存するファイル名を入力する
+		$savename = Read-Host "please enter filename to save as PNG" 
+		
+		try{
+			#保存する
+			$DstBmp.Save((Get-Location).Path + '\WinForm_png\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)	
+		}catch{
+			Write-Host "Save failed."
+			throw ArgumentNullException
+		}
+		"savename: $savename" | Add-Content $logfilename -Encoding UTF8
+	
+	#	Write-Host "Convert-LabelToImage: END"
 	}
-	"savename: $savename" | Add-Content $logfilename -Encoding UTF8
-
-#	Write-Host "Convert-LabelToImage: END"
-}
-
+	
 # ランダムにラベルのサイズを返す処理
 function Get-RandomLabelSize{
 	$sizefilename = "./sizefile.txt"
@@ -61,6 +163,7 @@ function Get-RandomLabelSize{
 	return $selectsize
 }
 
+# ラベルのサイズを選択して返す処理
 function Get-SelectLabelSize{
 	$sizefilename = "./sizefile.txt"
 	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
@@ -151,6 +254,23 @@ function Get-SelectLabelSize{
 	return $ret
 }
 
+# ランダムにテキストの配置設定を返す処理
+function Get-RandomTextAlign{
+#	Write-Host "Get-RandomTextAlign: START"
+
+	# ContentAlignment 列挙型の値を取得して配列に詰める
+	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
+	$count_arr = $arr.Count
+	# 配列の要素番号をランダムに取得する
+	$num_select = Get-Random -Maximum ($count_arr - 1)
+	$selected = $arr[$num_select]
+
+#	Write-Host "selected: $selected"
+#	Write-Host "Get-RandomTextAlign: END"
+
+	return $selected.Name
+}
+
 
 # ランダムに登録されている文字列を返す処理
 function Get-RandomRegisteredStr{
@@ -164,6 +284,8 @@ function Get-RandomRegisteredStr{
 
 	return $selectstr
 }
+
+# 登録している文字列を選択して返す処理
 function Get-SelectRegisteredStr{
 	$arr_str_all = Get-Content -LiteralPath $storefilename -Encoding UTF8
 
@@ -519,6 +641,15 @@ function Show_Message($text){
 
 	$label.font = $Font
 
+	$mode = Read-Host "Image random mode: r or R , select mode: s or S"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# 画像をランダムに設定する
+		$label.Image = Get-RandomSourceImg
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+		# 選択式で画像の設定を行う
+		$label.Image = Get-SelectSourceImg
+	}
+
 	# 最前面に表示：する
 	$form.Topmost = $True
 
@@ -685,6 +816,8 @@ Add-Type -AssemblyName System.Drawing
 $storefilename = "./datastore.txt"
 # ログファイル
 $logfilename = "./logfile.log"
+# ラベルに設定する画像ファイルを格納するフォルダ
+$sourceImgDir = (Get-Location).Path + '\source_img\'
 
 while ($true) {
     $select = Read-Host "please enter and start. if you want to quit, please 'q' and enter. if you want to check registered str, enter 'r'. if want to register words, enter 's'."
