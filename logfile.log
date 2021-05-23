@@ -418,3 +418,3899 @@ font_selected: Playbill
 TextAlign: BottomLeft
 strColor: LightSeaGreen
 savename: Tral1.png
+===========================
+text: Akmola Province
+backColor: HotPink
+===========================
+text: Queenstown
+backColor: DarkSlateBlue
+===========================
+text: Prague
+backColor: DarkViolet
+font_selected: Abraham Lincoln
+TextAlign: MiddleRight
+strColor: MintCream
+savename: fail
+===========================
+text: Lago Posadas
+backColor: LavenderBlush
+font_selected: Comic Sans MS
+TextAlign: BottomLeft
+strColor: Wheat
+===========================
+text: Lago Posadas
+backColor: Cyan
+font_selected: Wingdings 2
+TextAlign: TopCenter
+strColor: Cyan
+savename: fail.png
+===========================
+text: Mbandaka
+backColor: CadetBlue
+font_selected: Javanese Text
+TextAlign: MiddleLeft
+strColor: MediumBlue
+===========================
+text: Porto Alegre do Tocantins
+backColor: ForestGreen
+font_selected: Hagin Caps Thin Thin
+TextAlign: BottomCenter
+strColor: LightBlue
+===========================
+text: Akmola Province
+backColor: LightSkyBlue
+font_selected: PT Serif
+TextAlign: MiddleCenter
+strColor: Lavender
+===========================
+text: Porto Alegre do Tocantins
+backColor: MediumBlue
+font_selected: Malgun Gothic
+TextAlign: BottomRight
+strColor: DarkOrange
+===========================
+text: Porto Alegre do Tocantins
+backColor: DarkSeaGreen
+font_selected: Magneto
+TextAlign: BottomCenter
+strColor: DarkOrange
+===========================
+text: Porto Alegre do Tocantins
+backColor: PaleTurquoise Transparent
+font_selected: Constantia
+TextAlign: BottomRight
+strColor: Peru
+===========================
+text: Prague
+backColor: LimeGreen
+font_selected: Sylfaen
+TextAlign: TopLeft
+strColor: BurlyWood
+savename: Sylfaen.png
+===========================
+text: Queenstown
+backColor: Black
+font_selected: Cavalcade Lined
+TextAlign: BottomLeft
+strColor: PapayaWhip
+savename: Queenstown2.png
+===========================
+text: Akmola Province
+backColor: SeaShell
+font_selected: Hagin Caps Thin Thin
+TextAlign: TopCenter
+strColor: PaleGreen
+===========================
+text: Queenstown
+backColor: Bisque
+font_selected: 
+TextAlign: MiddleCenter
+strColor: Chocolate
+===========================
+text: Mbandaka
+backColor: SeaGreen
+font_selected: Sitka Subheading
+TextAlign: BottomLeft
+strColor: DarkOrchid
+savename: Mbandaka1.png
+===========================
+text: Akmola Province
+backColor: LemonChiffon
+font_selected: Showcard Gothic
+TextAlign: MiddleLeft
+strColor: Maroon
+cancel
+===========================
+text: Manggagong
+backColor: Silver
+font_selected: Algerian
+TextAlign: TopLeft
+strColor: LawnGreen
+savename: Manggagong1.png
+===========================
+text: Vanderhoof
+backColor: MediumAquamarine
+font_selected: Quint Uppercase
+TextAlign: TopLeft
+strColor: Peru
+savename: Vanderhoof1.png
+===========================
+text: Machanga
+backColor: MidnightBlue
+font_selected: Gigi
+TextAlign: BottomCenter
+strColor: OliveDrab
+cancel
+===========================
+text: Queenstown
+backColor: DarkSlateBlue
+font_selected: Segoe UI Light
+TextAlign: MiddleRight
+strColor: DarkTurquoise
+savename: Queenstown3.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: AliceBlue
+font_selected: Bodoni MT Black
+TextAlign: MiddleRight
+strColor: LightYellow
+savename: PortoAlegre2.png
+===========================
+text: Machanga
+backColor: DarkKhaki
+font_selected: Times New Roman
+TextAlign: MiddleRight
+strColor: Snow
+savename: Machanga1.png
+===========================
+text: Prague
+backColor: PeachPuff
+font_selected: UD デジタル 教科書体 N-B
+TextAlign: TopLeft
+strColor: AntiqueWhite
+cancel
+===========================
+text: Akmola Province
+backColor: SlateGray
+font_selected: Segoe Script
+TextAlign: BottomCenter
+strColor: MediumOrchid
+savename: AkmolaProvince2.png
+===========================
+text: Akmola Province
+backColor: Maroon
+font_selected: Rockwell Condensed
+TextAlign: BottomLeft
+strColor: Honeydew
+savename: AkmolaProvince3.png
+===========================
+text: Manggagong
+backColor: MediumOrchid
+font_selected: Black Grounds
+TextAlign: MiddleRight
+strColor: LavenderBlush
+cancel
+===========================
+text: Lago Posadas
+backColor: BlanchedAlmond
+font_selected: Brush Script MT
+TextAlign: MiddleRight
+strColor: Maroon
+savename: LagoPosadas1.png
+===========================
+text: Lago Posadas
+backColor: Snow
+font_selected: Tw Cen MT Condensed
+TextAlign: MiddleRight
+strColor: SeaGreen
+cancel
+===========================
+text: Tral
+backColor: DarkGray
+font_selected: Gabriola
+TextAlign: MiddleLeft
+strColor: DarkMagenta
+savename: Tral2.png
+===========================
+text: Lago Posadas
+backColor: MediumBlue
+font_selected: Gill Sans MT
+TextAlign: MiddleRight
+strColor: Peru
+savename: LagoPosadas
+===========================
+text: Tral
+backColor: MistyRose
+font_selected: Cambria
+TextAlign: MiddleLeft
+strColor: PaleGoldenrod
+cancel
+===========================
+text: Mbandaka
+backColor: DarkMagenta
+font_selected: Lucida Calligraphy
+TextAlign: TopLeft
+strColor: Snow
+cancel
+===========================
+text: Queenstown
+backColor: Black
+font_selected: Sitka Banner
+TextAlign: BottomLeft
+strColor: MediumSeaGreen
+savename: Queenstown4.png
+===========================
+text: Queenstown
+backColor: Maroon
+font_selected: Hagin Caps Medium Medium
+TextAlign: TopLeft
+strColor: Wheat
+savename: Queenstown5.png
+===========================
+text: Manggagong
+backColor: Plum
+font_selected: 游ゴシック Light
+TextAlign: MiddleLeft
+strColor: LawnGreen
+cancel
+===========================
+text: Lago Posadas
+backColor: FloralWhite
+font_selected: Consolas
+TextAlign: MiddleRight
+strColor: Navy
+cancel
+===========================
+text: Tral
+backColor: ForestGreen
+font_selected: Valentina
+TextAlign: MiddleLeft
+strColor: MediumAquamarine
+savename: Tral3.png
+===========================
+text: Manggagong
+backColor: HotPink
+font_selected: Bahnschrift SemiBold
+TextAlign: BottomLeft
+strColor: LimeGreen
+cancel
+===========================
+text: Machanga
+backColor: Purple
+font_selected: HGS教科書体
+TextAlign: BottomLeft
+strColor: DarkGreen
+cancel
+===========================
+text: Udorsky District
+backColor: DarkMagenta
+font_selected: RustlerBarter
+TextAlign: BottomLeft
+strColor: DarkOrchid
+savename: UdorskyDistrict1.png
+===========================
+text: Prague
+backColor: Turquoise
+font_selected: Gabriola
+TextAlign: MiddleRight
+strColor: Plum
+cancel
+===========================
+text: Vanderhoof
+backColor: Ivory
+font_selected: Handy Quomte
+TextAlign: MiddleLeft
+strColor: MidnightBlue
+savename: Vanderhoof2.png
+===========================
+text: Prague
+backColor: Goldenrod
+font_selected: Gill Sans Ultra Bold Condensed
+TextAlign: MiddleLeft
+strColor: MediumTurquoise
+savename: Prague5.png
+===========================
+text: Akmola Province
+backColor: Crimson
+font_selected: Forte
+TextAlign: TopLeft
+strColor: PapayaWhip
+savename: AkmolaProvince4.png
+===========================
+text: Akmola Province
+backColor: MidnightBlue
+font_selected: Bahnschrift SemiLight Condensed
+TextAlign: TopCenter
+strColor: LightCoral
+cancel
+===========================
+text: Prague
+backColor: SlateGray
+font_selected: Ebrima
+TextAlign: BottomRight
+strColor: Ivory
+savename: Prague6.png
+===========================
+text: Queenstown
+backColor: DarkKhaki
+font_selected: Kristen ITC
+TextAlign: BottomCenter
+strColor: PaleGreen
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: MidnightBlue
+font_selected: Argon Demo
+TextAlign: BottomLeft
+strColor: Maroon
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Crimson
+font_selected: Kunstler Script
+TextAlign: BottomLeft
+strColor: WhiteSmoke
+savename: PortoAlegre3.png
+===========================
+text: Lago Posadas
+backColor: OrangeRed
+font_selected: Cavalcade Inline Dashed
+TextAlign: MiddleRight
+strColor: White
+cancel
+===========================
+text: Mbandaka
+backColor: Chartreuse
+font_selected: Nirmala UI
+TextAlign: BottomCenter
+strColor: Thistle
+cancel
+===========================
+text: Vanderhoof
+backColor: OldLace
+font_selected: Bitter Pro Thin
+TextAlign: MiddleCenter
+strColor: Plum Empty
+cancel
+===========================
+text: Queenstown
+backColor: MediumSpringGreen
+font_selected: French Script MT
+TextAlign: MiddleRight
+strColor: PaleVioletRed
+savename: Queenstown6.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Brown
+font_selected: Abraham Lincoln
+TextAlign: MiddleCenter
+strColor: Purple
+savename: PortoAlegre4.png
+===========================
+text: Yakoma
+backColor: SkyBlue
+font_selected: UD デジタル 教科書体 N-R
+TextAlign: MiddleRight
+strColor: Moccasin
+cancel
+===========================
+text: Mbandaka
+backColor: LightSeaGreen
+font_selected: OCRB
+TextAlign: BottomLeft
+strColor: Black
+cancel
+===========================
+text: Udorsky District
+backColor: Crimson
+font_selected: MingLiU-ExtB
+TextAlign: BottomRight
+strColor: LightSlateGray
+cancel
+===========================
+text: Yakoma
+backColor: CadetBlue
+font_selected: MS Reference Specialty
+TextAlign: BottomLeft
+strColor: RoyalBlue
+savename: Yakoma1.png
+===========================
+text: Lago Posadas
+backColor: Aqua
+font_selected: Webdings
+TextAlign: BottomLeft
+strColor: DarkGoldenrod
+savename: LagoPosadas3.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: DarkGreen
+font_selected: Harlow Solid Italic
+TextAlign: TopLeft
+strColor: DimGray
+cancel
+===========================
+text: Yakoma
+backColor: Wheat
+font_selected: Kiano Trial
+TextAlign: TopCenter
+strColor: LightBlue
+cancel
+===========================
+text: Akmola Province
+backColor: LightGray
+font_selected: Nirmala UI Semilight
+TextAlign: BottomRight
+strColor: LawnGreen
+cancel
+===========================
+text: Manggagong
+backColor: LightSalmon
+font_selected: Calibri Light
+TextAlign: BottomLeft
+strColor: Aqua
+cancel
+===========================
+text: Udorsky District
+backColor: MediumAquamarine
+font_selected: Bookshelf Symbol 7
+TextAlign: MiddleRight
+strColor: SlateBlue
+savename: UdorskyDistrict2.png
+===========================
+text: Lago Posadas
+backColor: Gray
+font_selected: Constantia
+TextAlign: MiddleRight
+strColor: Green
+savename: LagoPosadas4.png
+===========================
+text: Machanga
+backColor: RoyalBlue
+font_selected: Copperplate Gothic Bold
+TextAlign: TopLeft
+strColor: MediumTurquoise
+cancel
+===========================
+text: Lago Posadas
+backColor: MediumSpringGreen
+font_selected: MADE SAONARA 2
+TextAlign: MiddleLeft
+strColor: Azure
+savename: LagoPosadas5.png
+===========================
+text: Tral
+backColor: DarkMagenta
+font_selected: Infinity
+TextAlign: MiddleLeft
+strColor: RosyBrown
+savename: Tral4.png
+===========================
+text: Udorsky District
+backColor: Gray
+font_selected: Hagin Caps Medium Medium
+TextAlign: BottomLeft
+strColor: MistyRose
+savename: UdorskyDistrict3.png
+===========================
+text: Vanderhoof
+backColor: Magenta
+font_selected: Epicgant
+TextAlign: BottomLeft
+strColor: MediumPurple
+cancel
+===========================
+text: Manggagong
+backColor: HotPink
+font_selected: Korneuburg Slab Bold
+TextAlign: BottomLeft
+strColor: CornflowerBlue
+cancel
+===========================
+text: Tral
+backColor: Crimson
+font_selected: Bahnschrift SemiCondensed
+TextAlign: MiddleCenter
+strColor: ForestGreen
+savename: Tral5.png
+===========================
+text: Hormozgan
+backColor: Gray
+font_selected: Sitka Small
+TextAlign: TopCenter
+strColor: Salmon
+cancel
+===========================
+text: Hormozgan
+backColor: LimeGreen
+font_selected: Brela
+TextAlign: BottomCenter
+strColor: Azure
+cancel
+===========================
+text: Stade frenda
+backColor: NavajoWhite
+font_selected: Bitter Pro SemiBold
+TextAlign: BottomLeft
+strColor: LawnGreen
+cancel
+===========================
+text: Prague
+backColor: Gold
+font_selected: Vaderlands
+TextAlign: MiddleCenter
+strColor: LightSeaGreen
+savename: Prague7.png
+===========================
+text: Hormozgan
+backColor: PaleTurquoise
+font_selected: Microsoft YaHei UI Light
+TextAlign: TopLeft
+strColor: Moccasin
+cancel
+===========================
+text: Prague
+backColor: Tan Empty
+font_selected: Quint Uppercase
+TextAlign: TopCenter
+strColor: MistyRose
+cancel
+===========================
+text: Udorsky District
+backColor: Coral
+font_selected: Leelawadee UI Semilight
+TextAlign: BottomCenter
+strColor: IndianRed
+cancel
+===========================
+text: Tral
+backColor: Pink
+font_selected: Franklin Gothic Medium
+TextAlign: BottomCenter
+strColor: BurlyWood
+cancel
+===========================
+text: Queenstown
+backColor: LightSlateGray
+font_selected: Bitter Pro ExtraBold
+TextAlign: TopCenter
+strColor: DarkTurquoise
+cancel
+===========================
+text: Stade frenda
+backColor: SlateBlue
+font_selected: BIZ UDPゴシック
+TextAlign: MiddleCenter
+strColor: DeepSkyBlue
+cancel
+===========================
+text: Lago Posadas
+backColor: AliceBlue
+font_selected: Comic Sans MS
+TextAlign: MiddleRight
+strColor: LightPink
+cancel
+===========================
+text: Prague
+backColor: Silver
+font_selected: HG明朝B
+TextAlign: MiddleLeft
+strColor: DarkOliveGreen
+savename: Prague8.png
+===========================
+text: Manggagong
+backColor: Goldenrod
+font_selected: HGｺﾞｼｯｸE
+TextAlign: MiddleLeft
+strColor: DarkSlateBlue
+cancel
+===========================
+text: Yakoma
+backColor: BlanchedAlmond
+font_selected: Segoe UI Semibold
+TextAlign: MiddleCenter
+strColor: DarkRed
+cancel
+===========================
+text: Prague
+backColor: LightSeaGreen
+font_selected: HG正楷書体-PRO
+TextAlign: BottomRight
+strColor: LightYellow
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: LightSlateGray
+font_selected: MingLiU_HKSCS-ExtB
+TextAlign: TopLeft
+strColor: DarkOliveGreen Empty
+savename: CreeLake1.png
+===========================
+text: Lago Posadas
+backColor: DarkOliveGreen
+font_selected: Korneuburg Slab Bold
+TextAlign: MiddleRight
+strColor: LightGoldenrodYellow
+savename: LagoPosadas6.png
+===========================
+text: Stade frenda
+backColor: DarkTurquoise
+font_selected: Segoe UI Black
+TextAlign: TopLeft
+strColor: Yellow
+savename: Stadefrenda1.png
+===========================
+text: Haigler Creek
+backColor: SkyBlue
+font_selected: French Script MT
+TextAlign: BottomLeft
+strColor: Goldenrod
+savename: HaiglerCreek1.png
+===========================
+text: Udorsky District
+backColor: LavenderBlush
+font_selected: Vladimir Script
+TextAlign: MiddleCenter
+strColor: LightSlateGray
+savename: UdorskyDistrict4.png
+===========================
+text: Queenstown
+backColor: DarkOrchid
+font_selected: Bookman Old Style
+TextAlign: TopLeft
+strColor: DeepSkyBlue
+cancel
+===========================
+text: Jurien Bay
+backColor: Gold
+font_selected: Snowpe
+TextAlign: BottomCenter
+strColor: DarkSalmon
+savename: JurienBay1.png
+===========================
+text: Fastina lente.
+backColor: SlateGray
+font_selected: Ailerons
+TextAlign: MiddleCenter
+strColor: Fuchsia
+cancel
+===========================
+text: Fastina lente.
+backColor: Aquamarine
+font_selected: Blackadder ITC
+TextAlign: BottomLeft
+strColor: Indigo
+cancel
+===========================
+text: Fastina lente.
+backColor: Crimson
+font_selected: Forum
+TextAlign: BottomRight
+strColor: SaddleBrown
+savename: Fastina_lente1.png
+===========================
+text: Fastina lente.
+backColor: Navy
+font_selected: Cavalcade Roughen
+TextAlign: BottomRight
+strColor: LavenderBlush
+savename: Fastina_lente2.png
+===========================
+text: Fastina lente.
+backColor: LightCyan
+font_selected: Castellar
+TextAlign: TopLeft
+strColor: Honeydew
+cancel
+===========================
+text: Fastina lente.
+backColor: Lime
+font_selected: Cormorant Medium
+TextAlign: MiddleCenter
+strColor: DimGray
+cancel
+===========================
+text: Fastina lente.
+backColor: SaddleBrown Empty
+font_selected: Impact
+TextAlign: BottomLeft
+strColor: MediumSpringGreen
+cancel
+===========================
+text: Fastina lente.
+backColor: Magenta
+font_selected: Yu Gothic UI Semilight
+TextAlign: TopLeft
+strColor: Snow
+cancel
+===========================
+text: Fastina lente.
+backColor: Olive
+font_selected: Candara
+TextAlign: BottomRight
+strColor: LightCyan
+cancel
+===========================
+text: Lago Posadas
+backColor: PaleTurquoise
+font_selected: Forum
+TextAlign: BottomLeft
+strColor: Bisque
+cancel
+===========================
+text: Yu Gothic UI Semilight
+backColor: Salmon
+font_selected: Niagara Solid
+TextAlign: TopCenter
+strColor: MediumTurquoise
+cancel
+===========================
+text: Fastina lente.
+backColor: DarkGreen
+font_selected: Wingdings 3
+TextAlign: MiddleCenter
+strColor: Thistle
+savename: Fastina_lente3.png
+===========================
+text: Fastina lente.
+backColor: GhostWhite
+font_selected: Cascadia Code Light
+TextAlign: MiddleRight
+strColor: LawnGreen
+cancel
+===========================
+text: Fastina lente.
+backColor: DarkBlue
+font_selected: Cascadia Code SemiLight
+TextAlign: MiddleLeft
+strColor: LawnGreen
+cancel
+===========================
+text: Fastina lente.
+backColor: SeaGreen
+font_selected: Coco Cond
+TextAlign: TopLeft
+strColor: MediumSpringGreen
+cancel
+===========================
+text: Fastina lente.
+backColor: DarkBlue
+font_selected: Microsoft PhagsPa
+TextAlign: TopLeft
+strColor: DarkCyan
+cancel
+===========================
+text: Fastina lente.
+backColor: PowderBlue
+font_selected: Magic Owl Personal Use
+TextAlign: BottomLeft
+strColor: Moccasin
+cancel
+===========================
+text: Machanga
+backColor: BlueViolet
+font_selected: Haettenschweiler
+TextAlign: MiddleCenter
+strColor: PapayaWhip
+savename: Machanga2.png
+===========================
+text: Fastina lente.
+backColor: LightSeaGreen
+font_selected: Yu Gothic UI Semibold
+TextAlign: BottomCenter
+strColor: DarkViolet
+cancel
+===========================
+text: Fastina lente.
+backColor: Lavender
+font_selected: Vaderlands
+TextAlign: MiddleRight
+strColor: Fuchsia
+savename: Fastina_lente4.png
+===========================
+text: Fastina lente.
+backColor: LightSkyBlue
+font_selected: Negara Serif Hairline
+TextAlign: MiddleCenter
+strColor: LightYellow
+cancel
+===========================
+text: Fastina lente.
+backColor: SlateGray
+font_selected: AL Nevrada Personal Use Only
+TextAlign: MiddleCenter
+strColor: DarkGray
+savename: Fastina_lente5.png
+===========================
+text: Shire of Dandaragan
+backColor: GhostWhite
+font_selected: OCR A Extended
+TextAlign: MiddleRight
+strColor: Pink
+cancel
+===========================
+text: Machanga
+backColor: MintCream
+font_selected: Segoe MDL2 Assets
+TextAlign: TopLeft
+strColor: White
+cancel
+===========================
+text: Tiaret
+backColor: Lime
+font_selected: Korneuburg Slab Bold
+TextAlign: BottomLeft
+strColor: PeachPuff
+savename: Tiaret1.png
+===========================
+text: Machanga
+backColor: Purple
+font_selected: Microsoft Himalaya
+TextAlign: MiddleCenter
+strColor: Tan
+savename: Machanga3.png
+===========================
+text: Jurien Bay
+backColor: DarkRed
+font_selected: Microsoft YaHei UI
+TextAlign: MiddleLeft
+strColor: BlueViolet
+savename: JurienBay2.png
+===========================
+text: Lago Posadas
+backColor: Gray
+font_selected: Lansdowne
+TextAlign: MiddleRight
+strColor: Goldenrod
+savename: LagoPosadas7.png
+===========================
+text: Tral
+backColor: Thistle
+font_selected: HGP明朝B
+TextAlign: TopCenter
+strColor: SpringGreen
+cancel
+===========================
+text: Tiaret
+backColor: Cornsilk
+font_selected: Footlight MT Light
+TextAlign: TopCenter
+strColor: LemonChiffon
+cancel
+===========================
+text: Stade frenda
+backColor: Turquoise
+font_selected: Segoe UI Emoji
+TextAlign: MiddleRight
+strColor: DarkOrange
+cancel
+===========================
+text: Tiaret
+backColor: DodgerBlue
+font_selected: 游明朝 Demibold
+TextAlign: MiddleCenter
+strColor: HotPink
+savename: Tiaret2.png
+===========================
+text: Tiaret
+backColor: LavenderBlush
+font_selected: Freestyle Script
+TextAlign: TopLeft
+strColor: Yellow
+savename: Tiaret3.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: Gray
+font_selected: Mistral
+TextAlign: TopLeft
+strColor: DarkGray
+savename: CreeLake2.png
+===========================
+text: Yakoma
+backColor: LightBlue
+font_selected: Eras Medium ITC
+TextAlign: MiddleLeft
+strColor: PapayaWhip
+savename: Yakoma2.png
+===========================
+text: Tral
+backColor: Firebrick
+font_selected: Malgun Gothic Semilight
+TextAlign: BottomLeft
+strColor: Salmon
+cancel
+===========================
+text: Jurien Bay
+backColor: Fuchsia
+font_selected: Informal Roman
+TextAlign: BottomLeft
+strColor: DarkRed
+savename: JurienBay3.png
+===========================
+text: Vanderhoof
+backColor: Magenta
+font_selected: North Avellion
+TextAlign: BottomCenter
+strColor: SpringGreen
+savename: Vanderhoof3.png
+===========================
+text: Stade frenda
+backColor: CornflowerBlue
+font_selected: Monotype Corsiva
+TextAlign: TopCenter
+strColor: Bisque Transparent
+cancel
+===========================
+text: Manggagong
+backColor: MediumAquamarine
+font_selected: HGSｺﾞｼｯｸM
+TextAlign: TopCenter
+strColor: MediumBlue
+cancel
+===========================
+text: Vanderhoof
+backColor: DarkKhaki
+font_selected: HGS創英ﾌﾟﾚｾﾞﾝｽEB
+TextAlign: TopLeft
+strColor: DarkRed
+savename: Vanderhoof4.png
+===========================
+text: Udorsky District
+backColor: Gainsboro
+font_selected: Sylfaen
+TextAlign: MiddleLeft
+strColor: PapayaWhip
+savename: UdorskyDistrict5.png
+===========================
+text: Haigler Creek
+backColor: AliceBlue
+font_selected: French Script MT
+TextAlign: BottomLeft
+strColor: DimGray
+savename: HaiglerCreek2.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: PaleTurquoise
+font_selected: Bahnschrift
+TextAlign: BottomLeft
+strColor: MediumBlue
+savename: CreeLake3.png
+===========================
+text: Machanga
+backColor: Beige
+font_selected: Bahnschrift SemiLight
+TextAlign: MiddleLeft
+strColor: Red
+cancel
+===========================
+text: Manggagong
+backColor: SpringGreen
+font_selected: Bahnschrift SemiBold SemiConden
+TextAlign: BottomCenter
+strColor: MintCream
+cancel
+===========================
+text: Vanderhoof
+backColor: DarkCyan
+font_selected: High Tower Text
+TextAlign: TopLeft
+strColor: RoyalBlue
+cancel
+===========================
+text: Tiaret
+backColor: Aqua
+font_selected: Franklin Gothic Medium
+TextAlign: MiddleCenter
+strColor: Blue
+savename: Tiaret4.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: SeaGreen
+font_selected: Tahoma
+TextAlign: MiddleCenter
+strColor: White
+savename: CreeLake4.png
+===========================
+text: Lago Posadas
+backColor: FloralWhite
+font_selected: Hagin Caps Medium Medium
+TextAlign: TopLeft
+strColor: Linen
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: RoyalBlue
+font_selected: Mongolian Baiti
+TextAlign: MiddleRight
+strColor: Indigo
+savename: CreeLake5.png
+===========================
+text: Yakoma
+backColor: LightGray
+font_selected: HGS行書体
+TextAlign: MiddleCenter
+strColor: SandyBrown
+savename: Yakoma3.png
+===========================
+text: Lago Posadas
+backColor: PowderBlue
+font_selected: HGS明朝B
+TextAlign: BottomRight
+strColor: Brown
+cancel
+===========================
+text: Tiaret
+backColor: PapayaWhip
+font_selected: Marlett
+TextAlign: BottomRight
+strColor: PaleGoldenrod
+savename: Tiaret5.png
+===========================
+text: Vanderhoof
+backColor: LightGoldenrodYellow
+font_selected: Pristina
+TextAlign: BottomRight
+strColor: DarkGreen
+savename: Vanderhoof5.png
+===========================
+text: Stade frenda
+backColor: MediumTurquoise
+font_selected: Abraham Lincoln
+TextAlign: BottomCenter
+strColor: Violet
+savename: Stade_frenda2.png
+===========================
+text: Manggagong
+backColor: AliceBlue
+font_selected: Agency FB
+TextAlign: BottomRight
+strColor: Blue
+savename: Manggagong2.png
+===========================
+text: Queenstown
+backColor: Red
+font_selected: Microsoft JhengHei Light
+TextAlign: BottomCenter
+strColor: DarkKhaki
+cancel
+===========================
+text: Prague
+backColor: Olive
+font_selected: Broadway
+TextAlign: MiddleCenter
+strColor: MediumTurquoise
+savename: Prague9.png
+===========================
+text: Haigler Creek
+backColor: ForestGreen
+font_selected: SimSun
+TextAlign: BottomLeft
+strColor: Beige
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Turquoise
+font_selected: Impact
+TextAlign: MiddleRight
+strColor: Brown
+savename: PortoAlegre5.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Gold
+font_selected: Bahnschrift SemiLight SemiConde
+TextAlign: TopLeft
+strColor: Chartreuse
+cancel
+===========================
+text: Hormozgan
+backColor: Lavender
+font_selected: Segoe Print
+TextAlign: TopCenter
+strColor: Tan
+cancel
+===========================
+text: Akmola Province
+backColor: WhiteSmoke
+font_selected: Bahnschrift Condensed
+TextAlign: TopCenter
+strColor: SaddleBrown
+savename: AkmolaProvince5.png
+===========================
+text: Jurien Bay
+backColor: Azure
+font_selected: Mistral
+TextAlign: BottomRight
+strColor: DimGray
+savename: JurienBay4.png
+===========================
+text: Akmola Province
+backColor: PaleVioletRed
+font_selected: Gadugi
+TextAlign: TopLeft
+strColor: DarkTurquoise
+savename: AkmolaProvince6.png
+===========================
+text: Hormozgan
+backColor: Indigo
+font_selected: Eras Medium ITC
+TextAlign: BottomCenter
+strColor: Magenta
+cancel
+===========================
+text: Prague
+backColor: SpringGreen
+font_selected: Microsoft New Tai Lue
+TextAlign: MiddleLeft
+strColor: Silver
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: GreenYellow
+font_selected: Tempus Sans ITC
+TextAlign: BottomLeft
+strColor: OrangeRed
+cancel
+===========================
+text: Queenstown
+backColor: SaddleBrown
+font_selected: Cavalcade Outline
+TextAlign: BottomRight
+strColor: SkyBlue
+savename: Queenstown7.png
+===========================
+text: Queenstown
+backColor: SaddleBrown
+font_selected: Arial Rounded MT Bold
+TextAlign: TopCenter
+strColor: BurlyWood
+cancel
+===========================
+text: Prague
+backColor: BlueViolet
+font_selected: Ebrima
+TextAlign: BottomCenter
+strColor: Honeydew
+cancel
+===========================
+text: Queenstown
+backColor: Crimson
+font_selected: Edwardian Script ITC
+TextAlign: TopCenter
+strColor: Maroon
+savename: Queenstown8.png
+===========================
+text: Machanga
+backColor: OliveDrab
+font_selected: HG創英角ﾎﾟｯﾌﾟ体
+TextAlign: TopCenter
+strColor: PowderBlue Transparent
+cancel
+===========================
+text: Jurien Bay
+backColor: Purple
+font_selected: Malgun Gothic
+TextAlign: MiddleLeft
+strColor: LimeGreen
+cancel
+===========================
+text: Machanga
+backColor: Yellow
+font_selected: Cooper Black
+TextAlign: MiddleLeft
+strColor: DarkViolet
+savename: Machanga4.png
+===========================
+text: Lago Posadas
+backColor: OliveDrab
+font_selected: Gill Sans MT Ext Condensed Bold
+TextAlign: TopCenter
+strColor: Sienna
+savename: LagoPosadas8.png
+===========================
+text: Udorsky District
+backColor: DodgerBlue
+font_selected: 
+TextAlign: TopCenter
+strColor: LightCoral
+cancel
+===========================
+text: Jurien Bay
+===========================
+text: Vanderhoof
+===========================
+text: Stade frenda
+backColor: Transparent OldLace Tan Cyan Turquoise Aqua DodgerBlue OrangeRed LimeGreen SpringGreen Olive Gold Ivory Plum Peru Tomato Turquoise LightSalmon MistyRose Plum LemonChiffon MediumTurquoise Turquoise MediumSlateBlue LightYellow PeachPuff LightYellow DarkKhaki Purple DarkOliveGreen Plum Tan Violet MediumTurquoise SandyBrown Coral Cornsilk PaleTurquoise DarkSlateBlue DarkBlue Coral OrangeRed Olive DarkCyan LightSeaGreen BlanchedAlmond DarkGoldenrod Aqua SkyBlue DarkKhaki RosyBrown Green DeepPink MediumAquamarine Fuchsia Plum LavenderBlush White OrangeRed MediumOrchid Moccasin Orange LavenderBlush Tomato LightCoral Aqua Chartreuse LightSteelBlue GreenYellow MediumSeaGreen LimeGreen DarkGray LightGreen White DarkSalmon Plum DarkSeaGreen Silver MediumSlateBlue SlateGray Thistle DarkSeaGreen PaleGoldenrod MintCream Chartreuse SkyBlue Honeydew LightYellow Peru LightPink DeepPink SlateBlue Violet PaleGoldenrod PaleVioletRed Chartreuse LawnGreen Empty LightBlue MediumSlateBlue OliveDrab MediumPurple Green WhiteSmoke Tan Chartreuse MediumBlue PapayaWhip SaddleBrown PowderBlue GreenYellow BurlyWood RosyBrown GhostWhite RosyBrown Silver MediumSeaGreen Firebrick LightSalmon DeepSkyBlue AliceBlue
+font_selected: HGP創英ﾌﾟﾚｾﾞﾝｽEB
+TextAlign: MiddleLeft
+strColor: Transparent DarkTurquoise LightSkyBlue Moccasin ForestGreen DarkSeaGreen Olive AntiqueWhite Gainsboro Khaki LavenderBlush PaleGreen LightSlateGray LightGray MediumSeaGreen LightYellow DarkTurquoise Violet GhostWhite DodgerBlue LimeGreen OldLace DarkTurquoise LightCyan White GreenYellow MediumSeaGreen MintCream GreenYellow LemonChiffon Green RosyBrown IndianRed PaleGoldenrod Gray DarkSlateGray ForestGreen LightGray DarkOliveGreen AntiqueWhite Violet AntiqueWhite LightBlue Black Cyan MediumOrchid MediumSeaGreen MediumAquamarine Silver DarkTurquoise MediumSeaGreen BlanchedAlmond DimGray DarkViolet MintCream Cyan Red MediumSeaGreen White CornflowerBlue MediumSeaGreen MediumPurple Chartreuse DodgerBlue LightSkyBlue DarkGreen Gainsboro LightGray DarkSalmon DarkOrchid Turquoise DarkSalmon AliceBlue OrangeRed Teal PaleGreen CornflowerBlue Chocolate
+cancel
+===========================
+text: Stade frenda
+backColor: SlateGray
+font_selected: Harrington
+TextAlign: BottomLeft
+strColor: LightSkyBlue
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: DimGray
+font_selected: Showcard Gothic
+TextAlign: MiddleRight
+strColor: RosyBrown
+cancel
+===========================
+text: Tiaret
+backColor: LimeGreen
+font_selected: Agency FB
+TextAlign: BottomLeft
+strColor: DarkGoldenrod
+cancel
+===========================
+text: Hormozgan
+backColor: RosyBrown
+font_selected: Segoe UI Semibold
+TextAlign: MiddleRight
+strColor: SlateGray
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Chocolate
+font_selected: Ailerons
+TextAlign: MiddleCenter
+strColor: MediumSlateBlue
+cancel
+===========================
+text: Tiaret
+backColor: Crimson
+font_selected: Argon Demo
+TextAlign: BottomCenter
+strColor: OrangeRed
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: GhostWhite
+font_selected: Arial
+TextAlign: MiddleRight
+strColor: DarkOliveGreen
+cancel
+===========================
+text: Haigler Creek
+backColor: Black
+===========================
+text: Tiaret
+backColor: Gainsboro
+===========================
+text: Machanga
+backColor: Silver
+font_selected: Arial Black
+TextAlign: BottomLeft
+strColor: DarkKhaki
+cancel
+===========================
+text: Jurien Bay
+backColor: LawnGreen
+font_selected: Arial Narrow
+TextAlign: TopLeft
+strColor: Violet
+cancel
+===========================
+text: Hormozgan
+backColor: LightSteelBlue
+font_selected: Ayres
+TextAlign: BottomRight
+strColor: Lavender
+cancel
+===========================
+text: Vanderhoof
+backColor: LightSeaGreen
+font_selected: Backslash
+TextAlign: MiddleLeft
+strColor: Aquamarine
+savename: Vanderhoof6.png
+===========================
+text: Hormozgan
+backColor: LightYellow
+font_selected: Bahnschrift
+TextAlign: BottomRight
+strColor: LawnGreen
+cancel
+===========================
+text: Yakoma
+backColor: DarkBlue
+font_selected: Bahnschrift Light
+TextAlign: BottomRight
+strColor: Coral
+cancel
+===========================
+text: Akmola Province
+backColor: SpringGreen
+font_selected: Barista Script
+TextAlign: TopLeft
+strColor: SeaGreen
+savename: AkmolaProvince7.png
+===========================
+text: Vanderhoof
+backColor: Cornsilk
+font_selected: Baskerville Old Face
+TextAlign: BottomRight
+strColor: MediumVioletRed
+cancel
+===========================
+text: Machanga
+backColor: DarkSeaGreen
+font_selected: Bauhaus 93
+TextAlign: BottomLeft
+strColor: Fuchsia
+savename: Machanga5.png
+===========================
+text: Prague
+backColor: DarkOrchid
+font_selected: Bell MT
+TextAlign: BottomRight
+strColor: SeaGreen
+cancel
+===========================
+text: Jurien Bay
+backColor: Firebrick
+font_selected: Berlin Sans FB
+TextAlign: BottomRight
+strColor: Goldenrod
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: AliceBlue
+font_selected: Berlin Sans FB Demi
+TextAlign: TopCenter
+strColor: AliceBlue
+cancel
+===========================
+text: Tral
+backColor: MediumSpringGreen
+font_selected: Bernard MT Condensed
+TextAlign: BottomCenter
+strColor: PaleGreen
+savename: Tral6.png
+===========================
+text: Prague
+backColor: DarkSalmon
+font_selected: Betterworks
+TextAlign: BottomCenter
+strColor: DarkOliveGreen
+savename: Prague10.png
+===========================
+text: Shire of Dandaragan
+backColor: Indigo
+font_selected: Betterworks Swashes
+TextAlign: MiddleCenter
+strColor: SandyBrown
+cancel
+===========================
+text: Machanga
+backColor: Chocolate
+font_selected: Betterworks Swashes
+TextAlign: MiddleLeft
+strColor: Navy
+savename: Machanga6.png
+===========================
+text: Vanderhoof
+backColor: Aqua
+font_selected: Bitter Pro
+TextAlign: BottomCenter
+strColor: DarkRed
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Turquoise
+font_selected: BIZ UDPゴシック
+TextAlign: TopLeft
+strColor: LemonChiffon
+savename: CreeLake6.png
+===========================
+text: Machanga
+backColor: GhostWhite
+font_selected: BIZ UDP明朝 Medium
+TextAlign: TopCenter
+strColor: DarkGray
+cancel
+===========================
+text: Tiaret
+backColor: PaleVioletRed
+font_selected: BIZ UDゴシック
+TextAlign: BottomLeft
+strColor: DeepSkyBlue
+cancel
+===========================
+text: Machanga
+backColor: Purple
+font_selected: BIZ UD明朝 Medium
+TextAlign: MiddleRight
+strColor: DarkSlateGray
+cancel
+===========================
+text: Tral
+backColor: LimeGreen
+font_selected: Berlin Sans FB Demi
+TextAlign: MiddleCenter
+strColor: Cyan
+cancel
+===========================
+text: Queenstown
+backColor: DarkSlateGray
+font_selected: Black Grounds
+TextAlign: MiddleLeft
+strColor: MediumBlue
+savename: Queenstown9.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: CadetBlue
+font_selected: Blackadder ITC
+TextAlign: BottomLeft
+strColor: DarkSeaGreen
+savename: CreeLake7.png
+===========================
+text: Vanderhoof
+backColor: LavenderBlush
+font_selected: Bodoni MT
+TextAlign: MiddleCenter
+strColor: OliveDrab
+cancel
+===========================
+text: Akmola Province
+backColor: LawnGreen
+font_selected: 
+TextAlign: BottomRight
+strColor: HotPink
+cancel
+===========================
+text: Jurien Bay
+===========================
+text: Haigler Creek
+===========================
+text: Akmola Province
+===========================
+text: Vanderhoof
+backColor: SteelBlue
+font_selected: MADE SAONARA 2
+TextAlign: BottomLeft
+strColor: Teal
+cancel
+===========================
+text: Jurien Bay
+backColor: MediumVioletRed
+font_selected: Bodoni MT Black
+TextAlign: TopCenter
+strColor: DarkSalmon
+savename: JurienBay5.png
+===========================
+text: Queenstown
+backColor: MediumBlue
+font_selected: Bodoni MT Condensed
+TextAlign: TopLeft
+strColor: Maroon
+savename: Queenstown10.png
+===========================
+text: Hormozgan
+backColor: CornflowerBlue
+font_selected: Bodoni MT Poster Compressed
+TextAlign: TopLeft
+strColor: Chartreuse
+savename: Hormozgan1.png
+===========================
+text: Machanga
+backColor: Plum
+font_selected: Book Antiqua
+TextAlign: BottomRight
+strColor: Honeydew
+cancel
+===========================
+text: Udorsky District
+backColor: Lavender
+font_selected: Book Antiqua
+TextAlign: TopCenter
+strColor: SlateBlue
+cancel
+===========================
+text: Prague
+backColor: MediumSlateBlue
+font_selected: Bookman Old Style
+TextAlign: TopLeft
+strColor: DarkGray
+cancel
+===========================
+text: Tiaret
+backColor: LavenderBlush
+font_selected: Bradley Hand ITC
+TextAlign: MiddleCenter
+strColor: DarkOrchid
+savename: Tiaret6.png
+===========================
+text: Machanga
+backColor: OldLace
+font_selected: Brela
+TextAlign: TopCenter
+strColor: Khaki
+cancel
+===========================
+text: Lago Posadas
+backColor: Gray
+font_selected: Britannic Bold
+TextAlign: MiddleCenter
+strColor: LightBlue
+savename: LagoPosadas9.png
+===========================
+text: Manggagong
+backColor: LimeGreen
+font_selected: Broadway
+TextAlign: BottomCenter
+strColor: LightSlateGray
+cancel
+===========================
+text: Hormozgan
+backColor: BlanchedAlmond
+font_selected: Brush Script MT
+TextAlign: MiddleRight
+strColor: ForestGreen
+savename: Hormozgan2.png
+===========================
+text: Tiaret
+backColor: MediumSpringGreen
+font_selected: Butler
+TextAlign: TopLeft
+strColor: ForestGreen
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: LightSkyBlue
+font_selected: Butler Stencil
+TextAlign: MiddleCenter
+strColor: MediumTurquoise
+savename: Shire1.png
+===========================
+text: Vanderhoof
+backColor: Fuchsia
+font_selected: Calibri
+TextAlign: BottomRight
+strColor: PeachPuff
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: OliveDrab
+font_selected: Calibri Light
+TextAlign: MiddleLeft
+strColor: SkyBlue
+cancel
+===========================
+text: Vanderhoof
+backColor: Beige
+font_selected: Californian FB
+TextAlign: MiddleLeft
+strColor: PaleVioletRed
+savename: Vanderhoof7.png
+===========================
+text: Akmola Province
+backColor: MidnightBlue
+font_selected: Calisto MT
+TextAlign: MiddleCenter
+strColor: Green
+savename: AkmolaProvince8.png
+===========================
+text: Stade frenda
+backColor: SlateBlue
+font_selected: Calluna
+TextAlign: MiddleRight
+strColor: Tan
+savename: Stadefrenda3.png
+===========================
+text: Stade frenda
+backColor: DarkGreen
+font_selected: Camar
+TextAlign: BottomLeft
+strColor: RoyalBlue
+savename: Stadefrenda4.png
+===========================
+text: Hormozgan
+backColor: PaleVioletRed
+font_selected: Cambria
+TextAlign: MiddleCenter
+strColor: Blue
+cancel
+===========================
+text: Machanga
+backColor: Transparent
+font_selected: Cambria Math
+TextAlign: BottomRight
+strColor: Violet
+cancel
+===========================
+text: Stade frenda
+backColor: Lime
+font_selected: Candara
+TextAlign: TopLeft
+strColor: OrangeRed
+cancel
+===========================
+text: Akmola Province
+backColor: SlateGray
+font_selected: Candara Light
+TextAlign: TopCenter
+strColor: Azure
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: Brown
+font_selected: Cascadia Code
+TextAlign: BottomRight
+strColor: DarkSlateBlue
+cancel
+===========================
+text: Lago Posadas
+backColor: Aquamarine
+font_selected: Cascadia Code ExtraLight
+TextAlign: BottomCenter
+strColor: Crimson
+cancel
+===========================
+text: Manggagong
+backColor: SlateBlue
+font_selected: Cascadia Code Light
+TextAlign: BottomCenter
+strColor: Firebrick
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: Khaki
+font_selected: Cascadia Code SemiBold
+TextAlign: BottomLeft
+strColor: DarkMagenta
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Lime
+font_selected: Cascadia Code SemiBold
+TextAlign: TopLeft
+strColor: DarkSeaGreen
+savename: CreeLake8.png
+===========================
+text: Shire of Dandaragan
+backColor: Lime
+font_selected: Cascadia Mono
+TextAlign: BottomLeft
+strColor: MediumBlue
+cancel
+===========================
+text: Jurien Bay
+backColor: HotPink
+font_selected: Cascadia Mono ExtraLight
+TextAlign: TopLeft
+strColor: Plum
+cancel
+===========================
+text: Hormozgan
+backColor: MediumPurple
+font_selected: Castellar
+TextAlign: MiddleCenter
+strColor: Cyan
+savename: Hormozgan3.png
+===========================
+text: Udorsky District
+backColor: RosyBrown
+font_selected: Cavalcade Inline Dashed
+TextAlign: BottomCenter
+strColor: DeepPink
+cancel
+===========================
+text: Lago Posadas
+backColor: PaleTurquoise
+font_selected: Cavalcade Lined
+TextAlign: BottomCenter
+strColor: DarkKhaki
+cancel
+===========================
+text: Lago Posadas
+backColor: Azure
+font_selected: Cavalcade Outline
+TextAlign: MiddleLeft
+strColor: SlateGray
+cancel
+===========================
+text: Jurien Bay
+backColor: Yellow
+font_selected: Cavalcade Roughen
+TextAlign: BottomRight
+strColor: LimeGreen
+savename: JurienBay6.png
+===========================
+text: Machanga
+backColor: MintCream
+font_selected: Cavalcade Shadow
+TextAlign: TopLeft
+strColor: Chocolate
+savename: Machanga6.png
+===========================
+text: Yakoma
+backColor: RoyalBlue
+font_selected: Centaur
+TextAlign: TopLeft
+strColor: LimeGreen
+cancel
+===========================
+text: Prague
+backColor: DarkGreen
+font_selected: Century
+TextAlign: TopLeft
+strColor: SandyBrown
+savename: Prague11.png
+===========================
+text: Vanderhoof
+backColor: PowderBlue
+font_selected: Century Gothic
+TextAlign: TopLeft
+strColor: OliveDrab
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Transparent
+font_selected: 
+TextAlign: BottomLeft
+strColor: LemonChiffon
+cancel
+===========================
+text: Stade frenda
+backColor: Firebrick
+font_selected: Century Schoolbook
+TextAlign: MiddleCenter
+strColor: Azure
+savename: Stadefrenda5.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Beige
+font_selected: Chiller
+TextAlign: TopCenter
+strColor: MediumPurple
+savename: PortoAlegre6.png
+===========================
+text: Shire of Dandaragan
+backColor: DarkKhaki
+font_selected: Choplin ExtraLight-DEMO
+TextAlign: MiddleCenter
+strColor: Purple
+cancel
+===========================
+text: Stade frenda
+backColor: LightCyan
+font_selected: Choplin Medium-DEMO
+TextAlign: MiddleLeft
+strColor: SeaGreen
+savename: Stadefrenda6.png
+===========================
+text: Akmola Province
+backColor: Indigo
+font_selected: Coco
+TextAlign: BottomCenter
+strColor: Bisque
+savename: AkmolaProvince9.png
+===========================
+text: Akmola Province
+backColor: Transparent
+font_selected: 
+TextAlign: TopCenter
+strColor: OrangeRed
+cancel
+===========================
+text: Haigler Creek
+backColor: Peru
+font_selected: Coco Cond
+TextAlign: BottomLeft
+strColor: AntiqueWhite
+savename: HaiglerCreek3.png
+===========================
+text: Hormozgan
+backColor: SkyBlue
+font_selected: Colonna MT
+TextAlign: MiddleRight
+strColor: WhiteSmoke
+savename: Hormozgan4.png
+===========================
+text: Prague
+backColor: IndianRed
+font_selected: Comic Sans MS
+TextAlign: BottomRight
+strColor: DarkTurquoise
+cancel
+===========================
+text: Vanderhoof
+backColor: Beige
+font_selected: Consolas
+TextAlign: BottomCenter
+strColor: MintCream
+cancel
+===========================
+text: Hormozgan
+backColor: Aqua
+font_selected: Consolas
+TextAlign: BottomLeft
+strColor: HotPink
+cancel
+===========================
+text: Jurien Bay
+backColor: DarkMagenta
+font_selected: Constantia
+TextAlign: BottomRight
+strColor: Gray
+savename: JurienBay7.png
+===========================
+text: Jurien Bay
+backColor: Wheat
+font_selected: Cooper Black
+TextAlign: MiddleCenter
+strColor: GreenYellow
+savename: JurienBay8.png
+===========================
+text: Queenstown
+backColor: RoyalBlue
+font_selected: Copperplate Gothic Bold
+TextAlign: BottomRight
+strColor: Chocolate
+cancel
+===========================
+text: Yakoma
+backColor: OldLace
+font_selected: Cooper Black
+TextAlign: BottomCenter
+strColor: WhiteSmoke
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Peru
+font_selected: Copperplate Gothic Bold
+TextAlign: BottomRight
+strColor: Purple
+cancel
+===========================
+text: Lago Posadas
+backColor: DeepSkyBlue
+font_selected: Copperplate Gothic Bold
+TextAlign: BottomLeft
+strColor: Cornsilk
+savename: LagoPosadas10.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: FloralWhite
+font_selected: Copperplate Gothic Light
+TextAlign: MiddleLeft
+strColor: Turquoise
+cancel
+===========================
+text: Hormozgan
+backColor: MediumSlateBlue
+font_selected: Corbel
+TextAlign: BottomLeft
+strColor: WhiteSmoke
+cancel
+===========================
+text: Akmola Province
+backColor: OrangeRed
+font_selected: Corbel Light
+TextAlign: MiddleCenter
+strColor: MidnightBlue
+savename: AkmolaProvince10.png
+===========================
+text: Hormozgan
+backColor: DarkViolet
+font_selected: Cormorant Medium
+TextAlign: MiddleLeft
+strColor: Moccasin
+cancel
+===========================
+text: Tral
+backColor: Cyan
+font_selected: Cornerstone
+TextAlign: TopLeft
+strColor: PaleGreen
+cancel
+===========================
+text: Haigler Creek
+backColor: PowderBlue
+font_selected: Courier New
+TextAlign: TopCenter
+strColor: CornflowerBlue
+cancel
+===========================
+text: Stade frenda
+backColor: Goldenrod
+font_selected: Curlz MT
+TextAlign: TopLeft
+strColor: PaleVioletRed
+cancel
+===========================
+text: Hormozgan
+backColor: Olive
+font_selected: dattebayo
+TextAlign: MiddleLeft
+strColor: HotPink
+savename: Hormozgan5.png
+===========================
+text: Vanderhoof
+backColor: MediumSlateBlue
+font_selected: Dosis
+TextAlign: MiddleCenter
+strColor: LightGoldenrodYellow
+savename: Vanderhoof8.png
+===========================
+text: Prague
+backColor: DarkGoldenrod
+font_selected: Dubai
+TextAlign: BottomCenter
+strColor: RoyalBlue
+savename: Prague12.png
+===========================
+text: Prague
+backColor: SandyBrown
+font_selected: Dubai Light
+TextAlign: MiddleLeft
+strColor: SlateBlue
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Fuchsia
+font_selected: Dubai Medium
+TextAlign: MiddleLeft
+strColor: LavenderBlush
+cancel
+===========================
+text: Tral
+backColor: LightCyan
+font_selected: Ebrima
+TextAlign: BottomCenter
+strColor: Linen
+cancel
+===========================
+text: Tiaret
+backColor: Indigo
+font_selected: Edwardian Script ITC
+TextAlign: MiddleCenter
+strColor: Lavender
+savename: Tiaret7.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: DimGray
+font_selected: Elephant
+TextAlign: BottomLeft
+strColor: Lavender
+savename: CreeLake8.png
+===========================
+text: Haigler Creek
+backColor: LightSteelBlue
+font_selected: Engravers MT
+TextAlign: BottomRight
+strColor: Chocolate
+cancel
+===========================
+text: Manggagong
+backColor: Lavender
+font_selected: Engravers MT
+TextAlign: TopCenter
+strColor: Transparent
+cancel
+===========================
+text: Akmola Province
+backColor: DarkGray
+font_selected: Epicgant
+TextAlign: TopCenter
+strColor: CadetBlue
+savename:  AkmolaProvince11.png
+===========================
+text: Shire of Dandaragan
+backColor: LightGreen
+font_selected: Eras Bold ITC
+TextAlign: MiddleCenter
+strColor: BlanchedAlmond
+savename: Shire2.png
+===========================
+text: Tral
+backColor: DarkSlateBlue
+font_selected: Eras Demi ITC
+TextAlign: BottomCenter
+strColor: Crimson
+savename: Tral7.png
+===========================
+text: Manggagong
+backColor: Peru
+font_selected: Eras Light ITC
+TextAlign: TopCenter
+strColor: Teal
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: NavajoWhite
+font_selected: Eras Medium ITC
+TextAlign: MiddleRight
+strColor: LavenderBlush
+savename: PortoAlegre7.png
+===========================
+text: Machanga
+backColor: Black
+font_selected: Felix Titling
+TextAlign: TopCenter
+strColor: Peru
+cancel
+===========================
+text: Machanga
+backColor: Cornsilk
+font_selected: Felix Titling
+TextAlign: MiddleLeft
+strColor: PaleVioletRed
+cancel
+===========================
+text: Udorsky District
+backColor: HotPink
+font_selected: Felix Titling
+TextAlign: MiddleLeft
+strColor: SpringGreen
+savename: UdorskyDistrict6.png
+===========================
+text: Tral
+backColor: DarkSalmon
+font_selected: Footlight MT Light
+TextAlign: BottomLeft
+strColor: DeepPink
+savename: Tral8.png
+===========================
+text: Vanderhoof
+backColor: DarkGray
+font_selected: Forte
+TextAlign: TopCenter
+strColor: OldLace
+savename: Vanderhoof9.png
+===========================
+text: Shire of Dandaragan
+backColor: Firebrick
+font_selected: Forum
+TextAlign: TopLeft
+strColor: DarkGreen
+savename: Shire3.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: BurlyWood
+font_selected: Franklin Gothic Book
+TextAlign: BottomLeft
+strColor: RoyalBlue
+cancel
+===========================
+text: Lago Posadas
+backColor: PaleTurquoise
+font_selected: Franklin Gothic Demi
+TextAlign: BottomLeft
+strColor: SeaGreen
+savename: LagoPosadas11.png
+===========================
+text: Shire of Dandaragan
+backColor: SteelBlue
+font_selected: Franklin Gothic Demi Cond
+TextAlign: BottomCenter
+strColor: MediumPurple
+savename: Shire4.png
+===========================
+text: Prague
+backColor: NavajoWhite
+font_selected: Franklin Gothic Heavy
+TextAlign: MiddleLeft
+strColor: PaleGoldenrod
+savename: Prague13.png
+===========================
+text: Akmola Province
+backColor: Yellow
+font_selected: Franklin Gothic Medium Cond
+TextAlign: BottomLeft
+strColor: Orchid
+savename: AkmolaProvince12.png
+===========================
+text: Haigler Creek
+backColor: Lime
+font_selected: Freestyle Script
+TextAlign: MiddleLeft
+strColor: Silver
+savename: HaiglerCreek4.png
+===========================
+text: Prague
+backColor: LightPink
+font_selected: French Script MT
+TextAlign: TopLeft
+strColor: DarkGreen
+savename: Prague14.png
+===========================
+text: Yakoma
+backColor: Brown
+font_selected: UD デジタル 教科書体 NP-R
+TextAlign: BottomLeft
+strColor: DarkSlateBlue
+cancel
+===========================
+text: Hormozgan
+backColor: OliveDrab
+font_selected: Gabriola
+TextAlign: MiddleRight
+strColor: Plum
+savename: Hormozgan6.png
+===========================
+text: Akmola Province
+backColor: OldLace
+font_selected: Gadugi
+TextAlign: TopLeft
+strColor: PowderBlue
+savename: AkmolaProvince13.png
+===========================
+text: Akmola Province
+backColor: PowderBlue
+font_selected: Garamond
+TextAlign: BottomCenter
+strColor: Indigo
+cancel
+===========================
+text: Prague
+backColor: Thistle
+font_selected: Garamond
+TextAlign: MiddleCenter
+strColor: Lime
+savename: Prague15.png
+===========================
+text: Vanderhoof
+backColor: PaleGoldenrod
+font_selected: Georgia
+TextAlign: TopLeft
+strColor: Orange
+savename: Vanderhoof10.png
+===========================
+text: Vanderhoof
+backColor: BurlyWood
+font_selected: Gigi
+TextAlign: MiddleLeft
+strColor: Gainsboro
+cancel
+===========================
+text: Hormozgan
+backColor: AntiqueWhite
+font_selected: Gilbert Bold Preview5
+TextAlign: BottomRight
+strColor: Coral
+savename: Hormozgan7.png
+===========================
+text: Stade frenda
+backColor: Gainsboro
+font_selected: Gilbert Bold Preview5
+TextAlign: BottomRight
+strColor: GreenYellow
+savename: Stadefrenda7.png
+===========================
+text: Haigler Creek
+backColor: MintCream
+font_selected: Gilbert Color Bold Preview5
+TextAlign: MiddleLeft
+strColor: Firebrick
+savename: HaiglerCreek5.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: HotPink
+font_selected: Gill Sans MT
+TextAlign: MiddleCenter
+strColor: DarkOrange
+savename: PortoAlegre8.png
+===========================
+text: Jurien Bay
+backColor: Brown
+font_selected: Gill Sans MT Condensed
+TextAlign: MiddleRight
+strColor: PowderBlue
+savename: JurienBay9.png
+===========================
+text: Queenstown
+backColor: Snow
+font_selected: Gill Sans Ultra Bold
+TextAlign: BottomLeft
+strColor: DimGray
+savename: Queenstown11.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: MistyRose
+font_selected: 
+TextAlign: MiddleRight
+strColor: Tan
+cancel
+===========================
+text: Musée Jean Calvin
+backColor: MediumSlateBlue
+font_selected: Gloucester MT Extra Condensed
+TextAlign: MiddleLeft
+strColor: Fuchsia
+savename: Musée1.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: LawnGreen
+font_selected: Goudy Old Style
+TextAlign: BottomRight
+strColor: DeepSkyBlue
+cancel
+===========================
+text: Stadium Coeur de Picardie
+backColor: Turquoise
+font_selected: 
+TextAlign: MiddleRight
+strColor: Cornsilk
+cancel
+===========================
+text: Stadium Coeur de Picardie
+backColor: Turquoise
+font_selected: Goudy Stout
+TextAlign: MiddleRight
+strColor: Thistle
+cancel
+===========================
+text: Stadium Coeur de Picardie
+backColor: DarkSlateGray
+font_selected: Haettenschweiler
+TextAlign: MiddleCenter
+strColor: DarkGreen
+savename: Stadium1.png
+===========================
+text: Stony Narrows
+backColor: DarkTurquoise
+font_selected: Haettenschweiler
+TextAlign: TopLeft
+strColor: Magenta
+savename: StonyNarrows1.png
+===========================
+text: Vanderhoof
+backColor: Gray
+font_selected: Kunstler Script
+TextAlign: MiddleRight
+strColor: IndianRed
+cancel
+===========================
+text: Musée Jean Calvin
+backColor: RoyalBlue
+font_selected: Segoe Print
+TextAlign: MiddleLeft
+strColor: MediumSpringGreen
+savename: Musée2.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: WhiteSmoke
+font_selected: AL Nevrada Personal Use Only
+TextAlign: BottomLeft
+strColor: AntiqueWhite
+cancel
+===========================
+text: Akmola Province
+backColor: Peru
+font_selected: Candara
+TextAlign: MiddleCenter
+strColor: LightYellow
+cancel
+===========================
+text: Vanderhoof
+backColor: LightSkyBlue
+font_selected: Franklin Gothic Medium Cond
+TextAlign: BottomRight
+strColor: Gold
+cancel
+===========================
+text: Queenstown
+backColor: LawnGreen
+font_selected: Copperplate Gothic Bold
+TextAlign: BottomCenter
+strColor: White
+cancel
+===========================
+text: Tral
+backColor: HotPink
+font_selected: Butler Stencil
+TextAlign: MiddleRight
+strColor: MidnightBlue
+cancel
+===========================
+text: Udorsky District
+backColor: Red
+font_selected: Microsoft Tai Le
+TextAlign: MiddleCenter
+strColor: DarkViolet
+cancel
+===========================
+text: Yakoma
+backColor: Brown
+font_selected: Sitka Text
+TextAlign: TopLeft
+strColor: HotPink
+cancel
+===========================
+text: Vanderhoof
+backColor: OldLace
+font_selected: Kiano Trial
+TextAlign: TopLeft
+strColor: BlanchedAlmond
+cancel
+===========================
+text: Queenstown
+backColor: Salmon
+font_selected: Bell MT
+TextAlign: MiddleRight
+strColor: SteelBlue
+savename: 	Queenstown12.png
+===========================
+text: Shire of Dandaragan
+backColor: Blue
+font_selected: Sitka Display
+TextAlign: BottomRight
+strColor: Green
+savename: Shire5.png
+===========================
+text: Queenstown
+backColor: LavenderBlush
+font_selected: Cavalcade Outline
+TextAlign: BottomRight
+strColor: DarkKhaki
+savename: Queenstown12.png
+===========================
+text: Musée Jean Calvin
+backColor: Plum
+font_selected: Hagin Caps Medium Medium
+TextAlign: MiddleLeft
+strColor: DimGray
+savename: Musée2.png
+===========================
+text: Stony Narrows
+backColor: Salmon
+font_selected: Hagin Caps Thin Thin
+TextAlign: MiddleCenter
+strColor: Salmon
+savename: StonyNarrows1.png
+===========================
+text: Jurien Bay
+backColor: Red
+font_selected: Handy Quomte
+TextAlign: TopLeft
+strColor: Indigo
+savename: JurienBay10.png
+===========================
+text: Haigler Creek
+backColor: SandyBrown
+font_selected: Harlow Solid Italic
+TextAlign: MiddleLeft
+strColor: DimGray
+savename: HaiglerCreek6.png
+===========================
+text: Stony Narrows
+backColor: Bisque
+font_selected: Harrington
+TextAlign: TopCenter
+strColor: DeepPink
+savename: StonyNarrows1.png
+===========================
+text: Stony Narrows
+backColor: LightGoldenrodYellow
+font_selected: High Tower Text
+TextAlign: BottomLeft
+strColor: LightCyan
+savename: StonyNarrows2.png
+===========================
+text: Stony Narrows
+backColor: Olive
+font_selected: HoloLens MDL2 Assets
+TextAlign: MiddleLeft
+strColor: LightPink
+savename: StonyNarrows3.png
+===========================
+text: Tabouk
+backColor: DarkViolet
+font_selected: Imprint MT Shadow
+TextAlign: MiddleLeft
+strColor: Maroon
+savename: Tabouk1.png
+===========================
+text: Tabouk
+backColor: DarkGreen
+font_selected: Infinity
+TextAlign: BottomRight
+strColor: MediumPurple
+savename: Tabouk2.png
+===========================
+text: Queenstown
+backColor: PaleTurquoise
+font_selected: Informal Roman
+TextAlign: MiddleCenter
+strColor: LightGray
+savename: Queenstown13.png
+===========================
+text: Morozovsk
+backColor: Fuchsia
+font_selected: Ink Free
+TextAlign: TopCenter
+strColor: Cyan
+cancel
+===========================
+text: Tabouk
+backColor: Maroon
+font_selected: Javanese Text
+TextAlign: BottomRight
+strColor: OliveDrab
+savename: Tabouk3.png
+===========================
+text: Manggagong
+backColor: Wheat
+font_selected: Jokerman
+TextAlign: MiddleRight
+strColor: Moccasin
+cancel
+===========================
+text: Jurien Bay
+backColor: DarkRed
+font_selected: Juice ITC
+TextAlign: MiddleLeft
+strColor: Wheat
+savename: JurienBay11.png
+===========================
+text: Stade frenda
+backColor: DeepPink
+font_selected: Kiano Trial
+TextAlign: MiddleRight
+strColor: Violet
+savename: Stadefrenda8.png
+===========================
+text: Morozovsk
+backColor: CornflowerBlue
+font_selected: Korneuburg Slab Bold
+TextAlign: BottomRight
+strColor: Violet
+savename: Morozovsk1.png
+===========================
+text: Morozovsk
+backColor: Bisque
+font_selected: Kunstler Script
+TextAlign: TopCenter
+strColor: Thistle
+cancel
+===========================
+text: Haigler Creek
+backColor: Gainsboro
+font_selected: Lansdowne
+TextAlign: TopLeft
+strColor: DarkBlue
+savename: HaiglerCreek7.png
+===========================
+text: Yakoma
+backColor: Teal
+font_selected: Lansdowne Slanted
+TextAlign: BottomLeft
+strColor: Cornsilk
+savename: Yakoma4.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: White
+font_selected: Lansdowne Slanted
+TextAlign: MiddleLeft
+strColor: RoyalBlue
+savename: PortoAlegre9.png
+===========================
+text: Musée Jean Calvin
+backColor: Teal
+font_selected: Leelawadee UI
+TextAlign: BottomRight
+strColor: LightGoldenrodYellow
+savename: Musée3.png
+===========================
+text: Akmola Province
+backColor: Khaki
+font_selected: Lucida Bright
+TextAlign: BottomLeft
+strColor: RosyBrown
+savename: AkmolaProvince14.png
+===========================
+text: Yakoma
+backColor: DarkSlateGray
+font_selected: Lucida Calligraphy
+TextAlign: BottomRight
+strColor: Transparent
+savename: Yakoma5.png
+===========================
+text: Lago Posadas
+backColor: OliveDrab
+font_selected: Lucida Console
+TextAlign: TopLeft
+strColor: HotPink
+savename: LagoPosadas12.png
+===========================
+text: Jurien Bay
+backColor: Red
+font_selected: Lucida Fax
+TextAlign: MiddleRight
+strColor: Chocolate
+savename: JurienBay12.png
+===========================
+text: Haigler Creek
+backColor: MediumSpringGreen
+font_selected: Lucida Handwriting
+TextAlign: TopLeft
+strColor: ForestGreen
+savename: HaiglerCreek8.png
+===========================
+text: Yakoma
+backColor: RoyalBlue
+font_selected: Lucida Sans
+TextAlign: BottomRight
+strColor: DarkGreen
+savename: Yakoma6.png
+===========================
+text: Tral
+backColor: MediumPurple
+font_selected: Lucida Sans Typewriter
+TextAlign: BottomLeft
+strColor: Fuchsia
+savename: Tral9.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: Teal
+font_selected: Lucida Sans Unicode
+TextAlign: MiddleRight
+strColor: LightSteelBlue
+savename: CreeLake9.png
+===========================
+text: Tabouk
+backColor: SkyBlue
+font_selected: MADE SAONARA 2
+TextAlign: MiddleRight
+strColor: Sienna
+savename: Tabouk4.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: LightYellow
+font_selected: Magic Owl Personal Use
+TextAlign: TopLeft
+strColor: Pink
+savename: PortoAlegre10.png
+===========================
+text: Akmola Province
+backColor: LightGoldenrodYellow
+font_selected: Magneto
+TextAlign: BottomCenter
+strColor: Maroon
+savename: AkmolaProvince15.png
+===========================
+text: Queenstown
+backColor: Azure
+font_selected: Maiandra GD
+TextAlign: MiddleRight
+strColor: DeepPink
+cancel
+===========================
+text: Stadium Coeur de Picardie
+backColor: MediumBlue
+font_selected: Malgun Gothic
+TextAlign: MiddleRight
+strColor: PeachPuff
+cancel
+===========================
+text: Haigler Creek
+backColor: AliceBlue
+font_selected: Malgun Gothic Semilight
+TextAlign: BottomRight
+strColor: Ivory
+cancel
+===========================
+text: Tabouk
+backColor: Linen
+font_selected: Mandhor
+TextAlign: BottomRight
+strColor: Thistle
+savename: Tabouk5.png
+===========================
+text: Shire of Dandaragan
+backColor: MediumSpringGreen
+font_selected: Marlett
+TextAlign: BottomLeft
+strColor: Gainsboro
+cancel
+===========================
+text: Stony Narrows
+backColor: Sienna
+font_selected: Matura MT Script Capitals
+TextAlign: TopLeft
+strColor: LightSkyBlue
+savename: StonyNarrows4.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: LightSeaGreen
+font_selected: Meiryo UI
+TextAlign: BottomRight
+strColor: Cyan
+cancel
+===========================
+text: Hormozgan
+backColor: DeepSkyBlue
+font_selected: Microsoft Himalaya
+TextAlign: MiddleCenter
+strColor: DodgerBlue
+savename: Hormozgan8.png
+===========================
+text: Queenstown
+backColor: DarkCyan
+font_selected: Microsoft JhengHei
+TextAlign: BottomRight
+strColor: DeepPink
+cancel
+===========================
+text: Manggagong
+backColor: SteelBlue
+font_selected: Microsoft JhengHei Light
+TextAlign: TopLeft
+strColor: Sienna
+cancel
+===========================
+text: Stade frenda
+backColor: Cornsilk
+font_selected: Microsoft JhengHei UI
+TextAlign: MiddleRight
+strColor: PapayaWhip
+cancel
+===========================
+text: Musée Jean Calvin
+backColor: WhiteSmoke
+font_selected: Microsoft PhagsPa
+TextAlign: MiddleLeft
+strColor: LightSeaGreen
+savename: Musée4.png
+===========================
+text: Vanderhoof
+backColor: AntiqueWhite
+font_selected: Microsoft Sans Serif
+TextAlign: MiddleRight
+strColor: AntiqueWhite
+cancel
+===========================
+text: Haigler Creek
+backColor: SteelBlue
+font_selected: Microsoft Sans Serif
+TextAlign: MiddleLeft
+strColor: Ivory
+savename: HaiglerCreek9.png
+===========================
+text: Hormozgan
+backColor: Lavender
+font_selected: Microsoft Tai Le
+TextAlign: BottomLeft
+strColor: PowderBlue
+cancel
+===========================
+text: Prague
+backColor: DarkMagenta
+font_selected: Microsoft YaHei
+TextAlign: MiddleCenter
+strColor: SlateGray
+savename: Prague16.png
+===========================
+text: Stade frenda
+backColor: Khaki
+font_selected: Microsoft YaHei Light
+TextAlign: BottomCenter
+strColor: Goldenrod
+savename: Stadefrenda9.png
+===========================
+text: Hormozgan
+backColor: Beige
+font_selected: Microsoft YaHei UI
+TextAlign: TopLeft
+strColor: DarkBlue
+cancel
+===========================
+text: Vanderhoof
+backColor: LightCoral
+font_selected: Microsoft Yi Baiti
+TextAlign: TopCenter
+strColor: DarkMagenta
+cancel
+===========================
+text: Prague
+backColor: SaddleBrown
+font_selected: MingLiU-ExtB
+TextAlign: MiddleCenter
+strColor: Sienna
+savename: Prague17.png
+===========================
+text: Jurien Bay
+backColor: DimGray
+font_selected: MingLiU_HKSCS-ExtB
+TextAlign: BottomRight
+strColor: Purple
+cancel
+===========================
+text: Jurien Bay
+backColor: Red
+font_selected: Mishella
+TextAlign: MiddleLeft
+strColor: AliceBlue
+savename: JurienBay13.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: LightSkyBlue
+font_selected: Mistral
+TextAlign: MiddleRight
+strColor: Brown
+savename: PortoAlegre11.png
+===========================
+text: Tiaret
+backColor: LightCoral
+font_selected: Modern No. 20
+TextAlign: MiddleLeft
+strColor: Brown
+savename: Tiaret8.png
+===========================
+text: Machanga
+backColor: PowderBlue
+font_selected: Mongolian Baiti
+TextAlign: TopLeft
+strColor: LightSalmon
+savename: Machanga7.png
+===========================
+text: Stony Narrows
+backColor: MediumSeaGreen
+font_selected: Monotype Corsiva
+TextAlign: MiddleCenter
+strColor: Gainsboro
+savename: StonyNarrows5.png
+===========================
+text: Musée Jean Calvin
+backColor: SeaGreen
+font_selected: Moon 2.0
+TextAlign: TopLeft
+strColor: CornflowerBlue
+===========================
+text: Shire of Dandaragan
+backColor: FloralWhite
+font_selected: Moon 2.0
+TextAlign: BottomCenter
+strColor: MediumPurple
+savename: Shire6.png
+===========================
+text: Musée Jean Calvin
+backColor: Snow
+font_selected: MS Outlook
+TextAlign: TopCenter
+strColor: DimGray
+savename: Musée3.png
+===========================
+text: Stade frenda
+backColor: Ivory
+font_selected: MS Reference Sans Serif
+TextAlign: BottomCenter
+strColor: Pink
+savename: Stadefrenda10.png
+===========================
+text: Queenstown
+backColor: Chartreuse
+font_selected: Lansdowne
+TextAlign: BottomCenter
+strColor: Salmon
+savename: Queenstown14.png
+===========================
+text: Stony Narrows
+backColor: PaleGreen
+font_selected: MS Reference Specialty
+TextAlign: MiddleCenter
+strColor: MediumPurple
+savename: StonyNarrows6.png
+===========================
+text: Hormozgan
+backColor: DarkGreen
+font_selected: MS UI Gothic
+TextAlign: TopLeft
+strColor: Salmon
+savename: Hormozgan9.png
+===========================
+text: Tiaret
+backColor: CornflowerBlue
+font_selected: MT Extra
+TextAlign: BottomRight
+strColor: DarkRed
+cancel
+===========================
+text: Stade frenda
+backColor: CornflowerBlue
+font_selected: MV Boli
+TextAlign: BottomLeft
+strColor: SkyBlue
+savename: Stadefrenda11.png
+===========================
+text: Lago Posadas
+backColor: LightBlue
+font_selected: Myanmar Text
+TextAlign: BottomCenter
+strColor: PaleVioletRed
+savename: LagoPosadas13.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Goldenrod
+font_selected: Negara Serif Hairline
+TextAlign: BottomCenter
+strColor: Yellow
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Brown
+font_selected: Negara Serif Hairline
+TextAlign: MiddleLeft
+strColor: Goldenrod
+savename: Cree10.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: Navy
+font_selected: Newslab
+TextAlign: MiddleLeft
+strColor: Orchid
+savename: Cree11.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Gainsboro
+font_selected: Niagara Engraved
+TextAlign: BottomCenter
+strColor: CadetBlue
+savename: PortoAlegre12.png
+===========================
+text: Stony Narrows
+backColor: LightCoral
+font_selected: Niagara Solid
+TextAlign: BottomCenter
+strColor: SlateBlue
+savename: StonyNarrows7.png
+===========================
+text: Shire of Dandaragan
+backColor: Turquoise
+font_selected: Nirmala UI
+TextAlign: MiddleLeft
+strColor: MediumSlateBlue
+savename: Shire7.png
+===========================
+text: Queenstown
+backColor: LavenderBlush
+font_selected: North Avellion
+TextAlign: BottomCenter
+strColor: Olive
+savename: Queenstown15.png
+===========================
+text: Machanga
+backColor: LightGreen
+font_selected: NSimSun
+TextAlign: MiddleLeft
+strColor: Cyan
+cancel
+===========================
+text: Yakoma
+backColor: MediumPurple
+font_selected: OCR A Extended
+TextAlign: MiddleLeft
+strColor: DarkRed
+savename: Yakoma7.png
+===========================
+text: Jurien Bay
+backColor: LightSlateGray
+font_selected: OCRB
+TextAlign: MiddleCenter
+strColor: Silver
+cancel
+===========================
+text: Tral
+backColor: Aqua
+font_selected: Old English Text MT
+TextAlign: BottomRight
+strColor: SteelBlue
+savename: Tral10.png
+===========================
+text: Yakoma
+backColor: MediumVioletRed
+font_selected: Onyx
+TextAlign: BottomRight
+strColor: LightGoldenrodYellow
+savename: Yakoma8.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: FloralWhite
+font_selected: Oranienbaum
+TextAlign: TopLeft
+strColor: OldLace
+cancel
+===========================
+text: Prague
+backColor: DarkGray
+font_selected: Oranienbaum
+TextAlign: MiddleLeft
+strColor: Snow
+savename: Prague18.png
+===========================
+text: Manggagong
+backColor: Linen
+font_selected: Ostrich Sans Bold
+TextAlign: MiddleLeft
+strColor: LightYellow
+savename: Manggagong3.png
+===========================
+text: Prague
+backColor: Indigo
+font_selected: Palace Script MT
+TextAlign: BottomCenter
+strColor: DarkBlue
+savename: Prague19.png
+===========================
+text: Prague
+backColor: RosyBrown
+font_selected: Palatino Linotype
+TextAlign: MiddleCenter
+strColor: DeepSkyBlue
+savename: Prague20.png
+===========================
+text: Prague
+backColor: FloralWhite
+font_selected: Papyrus
+TextAlign: BottomCenter
+strColor: Snow
+cancel
+===========================
+text: Stony Narrows
+backColor: DodgerBlue
+font_selected: Papyrus
+TextAlign: BottomRight
+strColor: Brown
+savename: StonyNarrows8.png
+===========================
+text: Shire of Dandaragan
+backColor: AliceBlue
+font_selected: Parchment
+TextAlign: BottomRight
+strColor: MediumVioletRed
+savename: Shire8.png
+===========================
+text: Vanderhoof
+backColor: MediumPurple
+font_selected: Perfect Moment Script
+TextAlign: BottomLeft
+strColor: Crimson
+savename: Vanderhoof11.@ng
+===========================
+text: Prague
+backColor: MediumSlateBlue
+font_selected: Perpetua
+TextAlign: MiddleLeft
+strColor: LightSeaGreen
+savename: Prague21.png
+===========================
+text: Yakoma
+backColor: BlueViolet
+font_selected: Perpetua Titling MT
+TextAlign: MiddleLeft
+strColor: SeaShell
+savename: Yakoma9.png
+===========================
+text: Stony Narrows
+backColor: LightSalmon
+font_selected: Phenomena Black
+TextAlign: MiddleLeft
+strColor: Lime
+savename: StonyNarrows9.png
+===========================
+text: Haigler Creek
+backColor: LightSeaGreen
+font_selected: Phenomena ExtraBold
+TextAlign: MiddleRight
+strColor: LightGreen
+savename: HaiglerCreek10.png
+===========================
+text: Haigler Creek
+backColor: Olive
+font_selected: Playbill
+TextAlign: MiddleLeft
+strColor: DarkCyan
+savename: HaiglerCreek11.png
+===========================
+text: Tiaret
+backColor: LightSalmon
+font_selected: PMingLiU-ExtB
+TextAlign: TopLeft
+strColor: Cyan
+savename: Tiaret9.png
+===========================
+text: Musée Jean Calvin
+backColor: MintCream
+font_selected: Poly
+TextAlign: BottomCenter
+strColor: LavenderBlush
+savename: Musée5.png
+===========================
+text: Queenstown
+backColor: Tomato
+font_selected: Poor Richard
+TextAlign: BottomCenter
+strColor: LightSkyBlue
+savename: Queenstown16.png
+===========================
+text: Jurien Bay
+backColor: Beige
+font_selected: Pristina
+TextAlign: BottomLeft
+strColor: Sienna
+savename: JurienBay14.png
+===========================
+text: Tiaret
+backColor: PeachPuff
+font_selected: PT Serif
+TextAlign: MiddleLeft
+strColor: HotPink
+savename: Tiaret10.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: DarkOliveGreen
+font_selected: Quint Uppercase
+TextAlign: MiddleCenter
+strColor: LightBlue
+savename: CreeLake10.png
+===========================
+text: Shire of Dandaragan
+backColor: DarkKhaki
+font_selected: Rage Italic
+TextAlign: MiddleRight
+strColor: MediumSlateBlue
+savename: Shire9.png
+===========================
+text: Hormozgan
+backColor: Gray
+font_selected: Ravie
+TextAlign: MiddleRight
+strColor: GhostWhite
+savename: Hormozgan10.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: DarkRed
+font_selected: Regave DemiBold
+TextAlign: MiddleCenter
+strColor: Blue
+savename: PortoAlegre13.png
+===========================
+text: Queenstown
+backColor: SeaShell
+font_selected: Rockwell
+TextAlign: TopLeft
+strColor: OldLace
+cancel
+===========================
+text: Stade frenda
+backColor: Ivory
+font_selected: Rockwell
+TextAlign: BottomLeft
+strColor: Ivory
+cancel
+===========================
+text: Queenstown
+backColor: OldLace
+font_selected: Rockwell
+TextAlign: MiddleCenter
+strColor: BlueViolet
+cancel
+===========================
+text: Manggagong
+backColor: SlateBlue
+font_selected: Rockwell Condensed
+TextAlign: TopCenter
+strColor: Honeydew
+cancel
+===========================
+text: Tiaret
+backColor: MediumVioletRed
+font_selected: Rockwell Extra Bold
+TextAlign: BottomRight
+strColor: LavenderBlush
+savename: Tiaret11.png
+===========================
+text: Haigler Creek
+backColor: Brown
+font_selected: RustlerBarter
+TextAlign: TopCenter
+strColor: MediumSeaGreen
+savename: HaiglerCreek12.png
+===========================
+text: Jurien Bay
+backColor: SteelBlue
+font_selected: Saint George Lowercase Stencil
+TextAlign: TopLeft
+strColor: MediumAquamarine
+savename: JurienBay15.png
+===========================
+text: Shire of Dandaragan
+backColor: BlanchedAlmond
+font_selected: Script MT Bold
+TextAlign: BottomCenter
+strColor: Firebrick
+savename: Shire10.png
+===========================
+text: Groningen
+backColor: Violet
+font_selected: Segoe MDL2 Assets
+TextAlign: BottomLeft
+strColor: LightSlateGray
+cancel
+===========================
+text: Groningen
+backColor: Salmon
+font_selected: Lucida Sans Unicode
+TextAlign: BottomRight
+strColor: DeepSkyBlue
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: LightSkyBlue
+font_selected: Segoe Print
+TextAlign: MiddleCenter
+strColor: LightSteelBlue
+savename: CreeLake11.png
+===========================
+text: Udorsky District
+backColor: MediumSpringGreen
+font_selected: Segoe Script
+TextAlign: BottomLeft
+strColor: Ivory
+savename: Udorsky7.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: SeaGreen
+font_selected: Segoe UI
+TextAlign: TopLeft
+strColor: LightCoral
+cancel
+===========================
+text: Stony Narrows
+backColor: Cornsilk
+font_selected: Segoe UI
+TextAlign: BottomCenter
+strColor: LightGoldenrodYellow
+cancel
+===========================
+text: Manggagong
+backColor: DarkGoldenrod
+font_selected: Segoe UI
+TextAlign: BottomCenter
+strColor: Transparent
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Yellow
+font_selected: Segoe UI
+TextAlign: TopLeft
+strColor: Fuchsia
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: Purple
+font_selected: Segoe UI Black
+TextAlign: BottomRight
+strColor: LightGray
+cancel
+===========================
+text: Eindhoven
+backColor: Maroon
+font_selected: Segoe UI Black
+TextAlign: BottomRight
+strColor: MistyRose
+savename: Eindhoven1.png
+===========================
+text: Eindhoven
+backColor: SpringGreen
+font_selected: Segoe UI Emoji
+TextAlign: BottomLeft
+strColor: Azure
+savename: Eindhoven2.png
+===========================
+text: Venlo
+backColor: DarkSlateBlue
+font_selected: Segoe UI Historic
+TextAlign: BottomRight
+strColor: DarkGreen
+savename: Venlo1.png
+===========================
+text: Venlo
+backColor: Silver
+font_selected: Segoe UI Light
+TextAlign: TopLeft
+strColor: LightSalmon
+savename: Venlo2.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: Olive
+font_selected: Segoe UI Semibold
+TextAlign: TopCenter
+strColor: AliceBlue
+savename: CreeLake12.png
+===========================
+text: Tiaret
+backColor: DarkOrange
+font_selected: Segoe UI Semilight
+TextAlign: MiddleCenter
+strColor: DarkRed
+savename: Tiaret12.png
+===========================
+text: Yakoma
+backColor: Green
+font_selected: Segoe UI Symbol
+TextAlign: BottomCenter
+strColor: LightSeaGreen
+savename: Yakoma10.png
+===========================
+text: Machanga
+backColor: SlateGray
+font_selected: Serat Ultra
+TextAlign: MiddleCenter
+strColor: Brown
+savename: Machanga8.png
+===========================
+text: Groningen
+backColor: OldLace
+font_selected: Serat Ultra
+TextAlign: BottomCenter
+strColor: MediumSpringGreen
+savename: Groningen1.png
+===========================
+text: Groningen
+backColor: Brown
+font_selected: Showcard Gothic
+TextAlign: BottomRight
+strColor: DarkSeaGreen
+cancel
+===========================
+text: Venlo
+backColor: ForestGreen
+font_selected: Showcard Gothic
+TextAlign: MiddleCenter
+strColor: DarkGreen
+savename: Venlo3.png
+===========================
+text: Venlo
+backColor: OldLace
+font_selected: SimSun-ExtB
+TextAlign: BottomLeft
+strColor: MediumOrchid
+cancel
+===========================
+text: Venlo
+backColor: MediumSeaGreen
+font_selected: Sitka Banner
+TextAlign: MiddleCenter
+strColor: Teal
+savename: Venlo4.png
+===========================
+text: Shire of Dandaragan
+backColor: Green
+font_selected: Sitka Display
+TextAlign: TopCenter
+strColor: BlueViolet
+savename: Shire11.png
+===========================
+text: Akmola Province
+backColor: Chartreuse
+font_selected: Sitka Heading
+TextAlign: MiddleRight
+strColor: DarkSlateGray
+savename: AkmolaProvince16.png
+===========================
+text: Eindhoven
+backColor: LightCoral
+font_selected: Sitka Small
+TextAlign: MiddleCenter
+strColor: Olive
+savename: Eindhoven3.png
+===========================
+text: Stony Narrows
+backColor: Fuchsia
+font_selected: Sitka Subheading
+TextAlign: TopCenter
+strColor: MediumSeaGreen
+cancel
+===========================
+text: Hormozgan
+backColor: DarkGoldenrod
+font_selected: Sitka Text
+TextAlign: MiddleRight
+strColor: Salmon
+savename: Hormozgan11.png
+===========================
+text: Queenstown
+backColor: DarkRed
+font_selected: Snap ITC
+TextAlign: BottomCenter
+strColor: Green
+savename: Queenstown17.png
+===========================
+text: Hormozgan
+backColor: PaleGoldenrod
+font_selected: Snowpe
+TextAlign: BottomLeft
+strColor: PaleTurquoise
+savename: Hormozgan12.png
+===========================
+text: Venlo
+backColor: CornflowerBlue
+font_selected: Stencil
+TextAlign: TopCenter
+strColor: Wheat
+savename: Venlo5.png
+===========================
+text: Lago Posadas
+backColor: OldLace
+font_selected: Sylfaen
+TextAlign: MiddleRight
+strColor: LimeGreen
+savename: LagoPosadas14.png
+===========================
+text: Akmola Province
+backColor: DarkOrchid
+font_selected: Symbol
+TextAlign: MiddleLeft
+strColor: Gold
+savename: AkmolaProvince17.png
+===========================
+text: Venlo
+backColor: Crimson
+font_selected: Tahoma
+TextAlign: BottomRight
+strColor: SeaShell
+savename: Venlo6.png
+===========================
+text: Queenstown
+backColor: Navy
+font_selected: Times New Roman
+TextAlign: TopCenter
+strColor: NavajoWhite
+savename: Queenstown18.png
+===========================
+text: Akmola Province
+backColor: Aqua
+font_selected: Trebuchet MS
+TextAlign: TopLeft
+strColor: Transparent
+savename: AkmolaProvince18.png
+===========================
+text: Jurien Bay
+backColor: LawnGreen
+font_selected: Tw Cen MT
+TextAlign: MiddleRight
+strColor: Olive
+cancel
+===========================
+text: Musée Jean Calvin
+backColor: Thistle
+font_selected: Tw Cen MT Condensed
+TextAlign: BottomLeft
+strColor: PaleGoldenrod
+savename: Musée6.png
+===========================
+text: Porto Alegre do Tocantins
+backColor: Moccasin
+font_selected: Tw Cen MT Condensed Extra Bold
+TextAlign: BottomLeft
+strColor: FloralWhite
+savename: PortoAlegre14.png
+===========================
+text: Stony Narrows
+backColor: LightYellow
+font_selected: Uni Neue Light
+TextAlign: MiddleCenter
+strColor: DarkSlateBlue
+savename: StonyNarrows10.png
+===========================
+text: Manggagong
+backColor: PaleGoldenrod
+font_selected: Vaderlands
+TextAlign: BottomLeft
+strColor: SpringGreen
+cancel
+===========================
+text: Venlo
+backColor: MediumPurple
+font_selected: Vaderlands
+TextAlign: BottomCenter
+strColor: LightYellow
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: AliceBlue
+font_selected: Valentina
+TextAlign: TopLeft
+strColor: LightGoldenrodYellow
+cancel
+===========================
+text: Prague
+backColor: Gray
+font_selected: Valentina
+TextAlign: MiddleLeft
+strColor: Silver
+savename: Prague22.png
+===========================
+text: Shire of Dandaragan
+backColor: Brown
+font_selected: Verdana
+TextAlign: TopCenter
+strColor: BlanchedAlmond
+cancel
+===========================
+text: Cree Lake I.r. 192g
+backColor: Turquoise
+font_selected: Viner Hand ITC
+TextAlign: BottomCenter
+strColor: SandyBrown
+savename: CreeLake13.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: CadetBlue
+font_selected: Vivaldi
+TextAlign: MiddleRight
+strColor: LightSalmon
+savename: Stadium2.png
+===========================
+text: Tiaret
+backColor: Lavender
+font_selected: Vladimir Script
+TextAlign: TopCenter
+strColor: PowderBlue
+savename: Tiaret13.png
+===========================
+text: Yulara
+backColor: MediumBlue
+font_selected: Webdings
+TextAlign: TopLeft
+strColor: DarkBlue
+savename: Yulara1.png
+===========================
+text: Cree Lake I.r. 192g
+backColor: DarkSlateBlue
+font_selected: Wide Latin
+TextAlign: MiddleRight
+strColor: PapayaWhip
+savename: CreeLake14.png
+===========================
+text: Queenstown
+backColor: SandyBrown
+font_selected: Wingdings
+TextAlign: MiddleCenter
+strColor: Aqua
+savename: Queenstown19.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: Yellow
+font_selected: Wingdings 2
+TextAlign: MiddleRight
+strColor: LavenderBlush
+cancel
+===========================
+text: Vanderhoof
+backColor: DarkSlateGray
+font_selected: Wingdings 3
+TextAlign: BottomCenter
+strColor: SeaGreen
+cancel
+===========================
+text: Venlo
+backColor: LightPink
+font_selected: Yu Gothic UI
+TextAlign: BottomRight
+strColor: Aquamarine
+savename: Venlo7.png
+===========================
+text: Udorsky District
+backColor: LightCoral
+===========================
+text: Venlo
+backColor: CadetBlue
+font_selected: Perpetua Titling MT
+TextAlign: MiddleLeft
+strColor: Coral
+cancel
+===========================
+text: Morozovsk
+backColor: WhiteSmoke
+font_selected: Eras Demi ITC
+TextAlign: TopCenter
+strColor: DarkBlue
+cancel
+===========================
+text: Venlo
+backColor: MediumBlue
+font_selected: Palace Script MT
+TextAlign: MiddleRight
+strColor: Orchid
+savename: Venlo_img.png
+===========================
+text: Vanderhoof
+backColor: Cyan
+font_selected: Bauhaus 93
+TextAlign: MiddleRight
+strColor: Gold
+cancel
+===========================
+text: Jurien Bay
+backColor: SandyBrown
+font_selected: Microsoft Tai Le
+TextAlign: BottomRight
+strColor: MediumOrchid
+savename: img2.png
+===========================
+text: Stadium Coeur de Picardie
+backColor: Chartreuse
+font_selected: Bitter Pro Black
+TextAlign: TopCenter
+strColor: Linen
+savename: IMG3.PNG
+===========================
+text: Jurien Bay
+backColor: WhiteSmoke
+font_selected: Microsoft JhengHei UI Light
+TextAlign: TopLeft
+strColor: HotPink
+savename: img4.png
+===========================
+text: Haigler Creek
+backColor: Wheat
+font_selected: Valentina
+TextAlign: MiddleLeft
+strColor: Moccasin
+cancel
+===========================
+text: Tral
+backColor: Fuchsia
+font_selected: Baskerville Old Face
+TextAlign: MiddleLeft
+strColor: WhiteSmoke
+cancel
+===========================
+text: kjm
+backColor: PaleVioletRed
+font_selected: Agency FB
+TextAlign: MiddleCenter
+strColor: Cyan
+cancel
+===========================
+text: Lago Posadas
+backColor: DarkOrange
+font_selected: Footlight MT Light
+TextAlign: MiddleRight
+strColor: LightBlue
+cancel
+===========================
+text: Haigler Creek
+backColor: CadetBlue
+font_selected: Playbill
+TextAlign: MiddleRight
+strColor: Gray
+image: System.Drawing.Bitmap
+cancel
+===========================
+text: Musée Jean Calvin
+backColor: Gainsboro
+font_selected: Broadway
+TextAlign: TopLeft
+strColor: GhostWhite
+image: 
+cancel
+===========================
+text: Stony Narrows
+backColor: BlanchedAlmond
+font_selected: Gadugi
+TextAlign: MiddleCenter
+strColor: BlanchedAlmond
+image: 
+cancel
+===========================
+text: Tiaret
+backColor: Tan
+font_selected: Imprint MT Shadow
+TextAlign: MiddleLeft
+strColor: Silver
+image: 
+cancel
+===========================
+text: Vanderhoof
+backColor: GreenYellow
+font_selected: Harlow Solid Italic
+TextAlign: BottomCenter
+strColor: DarkSlateBlue
+image: System.Drawing.Bitmap
+savename: img5.png
+===========================
+text: Stade frenda
+backColor: Bisque
+font_selected: Bitter Pro ExtraBold
+TextAlign: BottomRight
+strColor: DarkSalmon
+image: 
+cancel
+===========================
+text: Shire of Dandaragan
+backColor: Green
+font_selected: Phenomena Black
+TextAlign: BottomCenter
+strColor: Silver
+cancel
+===========================
+text: Lago Posadas
+backColor: DarkMagenta
+font_selected: Segoe UI
+TextAlign: TopCenter
+strColor: LightGray
+cancel
+===========================
+text: Haigler Creek
+backColor: LightCyan
+font_selected: Bodoni MT
+TextAlign: MiddleLeft
+strColor: Pink
+cancel
+===========================
+text: Machanga
+backColor: MediumSlateBlue
+font_selected: Gabriola
+TextAlign: BottomLeft
+strColor: Firebrick
+cancel
+===========================
+text: Lago Posadas
+backColor: MediumBlue
+font_selected: Perpetua
+TextAlign: MiddleRight
+strColor: CornflowerBlue
+cancel
+===========================
+text: Tabouk
+backColor: FloralWhite
+font_selected: MV Boli
+TextAlign: MiddleCenter
+strColor: Red
+cancel
+===========================
+text: Tiaret
+backColor: DarkOrange
+font_selected: Eras Light ITC
+TextAlign: MiddleCenter
+strColor: LightGoldenrodYellow
+cancel
+===========================
+text: Morozovsk
+backColor: Moccasin
+font_selected: Britannic Bold
+TextAlign: BottomCenter
+strColor: MediumTurquoise
+cancel
+===========================
+text: Machanga
+backColor: Pink
+font_selected: 
+TextAlign: MiddleRight
+strColor: Cornsilk
+cancel
+===========================
+text: Prague
+backColor: Orange
+font_selected: Harlow Solid Italic
+TextAlign: BottomRight
+TextAlign: BottomRight
+strColor: Violet
+cancel
+===========================
+text: Tral
+backColor: DarkMagenta
+font_selected: Mistral
+TextAlign: TopLeft
+TextAlign: TopLeft
+strColor: Ivory
+cancel
+===========================
+text: Prague
+backColor: AliceBlue
+font_selected: Coco
+TextAlign: @{Name=BottomLeft}
+TextAlign: TopLeft
+strColor: SteelBlue
+cancel
+===========================
+text: Stony Narrows
+backColor: MediumBlue
+font_selected: Cavalcade Shadow
+TextAlign: @{Name=MiddleLeft}
+TextAlign: TopLeft
+strColor: MediumOrchid
+cancel
+===========================
+text: Machanga
+backColor: Salmon
+font_selected: Segoe Script
+TextAlign: @{Name=BottomLeft}
+TextAlign: TopLeft
+strColor: LightCyan
+cancel
+===========================
+text: Yakoma
+backColor: DarkOliveGreen
+font_selected: Gloucester MT Extra Condensed
+TextAlign: TopCenter
+TextAlign: TopCenter
+strColor: Sienna
+cancel
+===========================
+text: Morozovsk
+backColor: BlanchedAlmond
+font_selected: Nirmala UI
+TextAlign: @{Name=BottomCenter}
+TextAlign: TopLeft
+strColor: DarkKhaki
+cancel
+===========================
+text: Manggagong
+backColor: Snow
+font_selected: Microsoft JhengHei UI Light
+TextAlign: TopLeft
+strColor: DarkRed
+cancel
+===========================
+text: Tiaret
+backColor: DeepPink
+font_selected: Centaur
+TextAlign: 
+TextAlign: TopLeft
+strColor: SteelBlue
+===========================
+text: Yulara
+backColor: BlanchedAlmond
+font_selected: Arial Black
+TextAlign: 0
+TextAlign: TopLeft
+strColor: LightGreen
+cancel
+===========================
+text: Porto Alegre do Tocantins
+backColor: Olive
+font_selected: Lucida Sans Unicode
+===========================
+text: Haigler Creek
+backColor: DodgerBlue
+font_selected: Gilbert Bold Preview5
+TextAlign: 0
+TextAlign: TopLeft
+strColor: DarkCyan
+cancel
+===========================
+text: Jurien Bay
+backColor: Red
+font_selected: Bahnschrift Light
+TextAlign: BottomCenter
+TextAlign: BottomCenter
+strColor: Thistle
+cancel
+===========================
+text: Stade frenda
+backColor: LightSteelBlue
+font_selected: Stencil
+TextAlign: TopLeft
+TextAlign: TopLeft
+strColor: Orchid
+cancel
+===========================
+text: Udorsky District
+backColor: DeepSkyBlue
+font_selected: Californian FB
+TextAlign: TopLeft
+TextAlign: TopLeft
+strColor: Lavender
+cancel
+===========================
+text: Akmola Province
+backColor: Aqua
+font_selected: Bookshelf Symbol 7
+TextAlign: BottomLeft
+strColor: Orange
+savename: img6.png
+===========================
+text: Lago Posadas
+backColor: OrangeRed
+font_selected: Tw Cen MT Condensed
+TextAlign: TopLeft
+strColor: WhiteSmoke
+cancel
+===========================
+text: Tutto e relativo.
+backColor: PeachPuff
+font_selected: Ayres
+TextAlign: BottomLeft
+strColor: IndianRed
+savename: img7.png
+===========================
+text: 
+backColor: NavajoWhite
+font_selected: 
+TextAlign: TopLeft
+strColor: LightPink
+cancel
+===========================
+text: 
+backColor: PaleVioletRed
+font_selected: 
+TextAlign: TopLeft
+strColor: Peru
+cancel
+===========================
+text: 
+backColor: PaleTurquoise
+===========================
+text: 
+backColor: Gold
+===========================
+text: Tiaret
+backColor: OldLace
+font_selected: Segoe UI Emoji
+TextAlign: BottomLeft
+strColor: Navy
+cancel
+===========================
+text: 
+backColor: DarkSeaGreen
+font_selected: 
+===========================
+text: Ragioneria di Roma
+backColor: PapayaWhip
+font_selected: Segoe Script
+TextAlign: BottomCenter
+strColor: SeaGreen
+cancel
+===========================
+text: kjm
+backColor: Peru
+font_selected: 
+TextAlign: TopLeft
+strColor: MistyRose
+cancel
+===========================
+text: kjm
+backColor: Gainsboro
+font_selected: Gill Sans Ultra Bold Condensed
+TextAlign: MiddleCenter
+strColor: Peru
+savename: kjm1.png
+===========================
+text: 
+backColor: White
+===========================
+text: Universita di Palermo
+backColor: SlateBlue
+font_selected: Calluna
+TextAlign: TopLeft
+strColor: RoyalBlue
+cancel
+===========================
+text: audace
+backColor: LavenderBlush
+===========================
+text: Motore di Vita!
+backColor: BurlyWood
+font_selected: Abraham Lincoln
+TextAlign: MiddleCenter
+strColor: BlueViolet
+cancel
+===========================
+text: Vincere!
+backColor: Crimson
+font_selected: AL Nevrada Personal Use Only
+TextAlign: TopRight
+strColor: Coral
+cancel
+===========================
+text: Stadium Coeur de Picardie
+backColor: Turquoise
+font_selected: Bitter Pro Black
+TextAlign: MiddleLeft
+strColor: DodgerBlue
+cancel
+===========================
+text: petrochemica
+backColor: BlueViolet
+font_selected: Malgun Gothic
+TextAlign: MiddleRight
+strColor: Orange
+cancel
