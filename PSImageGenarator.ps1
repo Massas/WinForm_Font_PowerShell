@@ -1,3 +1,64 @@
+
+# Get Image
+function Get-RandomOrSelectImage{
+	Write-Host "[Get-RandomOrSelectImage]:START"
+
+	$mode = Read-Host "Image random mode: r or R, select mode: s or S, in case of no need is others"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		$pattern = Read-Host "Image pattern:please Enter. repeating pattern(default): y spot: n"
+		switch -Wildcard ($pattern) {
+			"[yY]"{ 
+				Write-Host "pattern1"
+				$image = Get-RandomSourceImg		
+			}
+			"[nN]"{
+				Write-Host "pattern2"
+				# Set images randomly.
+				$image = Get-RandomSourceImg		
+			}
+			Default {
+				Write-Host "default1"
+				$image = Get-RandomSourceImg
+			}
+		}
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')){
+		$pattern = Read-Host "Image pattern:please Enter. repeating pattern(default): y spot: n"
+		switch -Wildcard ($pattern) {
+			"[yY]"{ 
+				Write-Host "pattern3"
+				$image = Get-SelectSourceImg		
+			}
+			"[nN]"{
+				Write-Host "pattern4"
+				# Set select images
+				$image = Get-SelectSourceImg		
+			}
+			Default {
+				Write-Host "default2"
+				$image = Get-SelectSourceImg
+			}
+		}
+	}else{
+		Write-Host "[Get-RandomOrSelectImage]:NO NEED"
+		return
+	}
+	Write-Host "[Get-RandomOrSelectImage]:END"
+	return $image
+}
+
+# create new background image processes's main routine
+function New-BakcgroundImg{
+	Write-Host "[New-BakcgroundImg]:START"
+	$image = $null
+	$image = Get-RandomOrSelectImage
+	if ($null -eq $image) {
+		Write-Host "[New-BakcgroundImg]:image is nothing"
+		return
+	}
+	Write-Host $image.GetType()
+	Write-Host "[New-BakcgroundImg]:END"
+}
+
 # Return a random datastore file.
 function Get-RandomStoreFile{
 	# Get the file name and put it into an array
@@ -953,6 +1014,7 @@ $logfilename = "./logfile.log"
 # Folder to store image files and store files to be set as labels
 $sourceImgDir = (Get-Location).Path + '\source_img\'
 $store_fileDir = (Get-Location).Path + '\store_file\'
+$backgroundImgDir = (Get-Location).Path + '\background_img\'
 
 # Select the data store file
 $mode = Read-Host "storefile random mode: r or R , select mode: s or S"
@@ -969,7 +1031,9 @@ if(($mode -eq 'r') -or ($mode -eq 'R')){
 $filename_store = $store_fileDir + $storefilename
 
 while ($true) {
-    $select = Read-Host "please enter and start. if you want to quit, please 'q' and enter. if you want to check registered str, enter 'r'. if want to register words, enter 's'."
+	Write-Host "[[MAIN FUNCTION]]"
+	Write-Host "please enter to start. if you want to quit, please 'q'. if you want to check registered str, enter 'r'."
+    $select = Read-Host "if want to register words, enter 's'. if you want to create background image, enter 'b'."
     if(($select -eq 'r') -or ($select -eq 'R')){
 		$r_storestr = $null
 
@@ -987,6 +1051,9 @@ while ($true) {
     }elseif(($select -eq 's') -or ($select -eq 'S')){
 		$mode = "register"
 		Show_WinForm $mode
+	}elseif(($select -eq 'b') -or ($select -eq 'B')){
+		# create new background image
+		New-BakcgroundImg
 	}elseif(($select -ne 'q') -or ($select -ne 'Q')){
         # Windows Form shows
         Show_WinForm
