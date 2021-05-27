@@ -747,6 +747,13 @@ function Show_Message($text){
 #	$label.Size = New-Object System.Drawing.Size(800,600)
 	$label.Text = $text
 
+	$str_labelforeColor = Get-RandomColor
+#	Write-Host "[Show_Message]str_labelForeColor: $str_labelforeColor"
+	$label.forecolor = $str_labelforeColor
+	"strColor: $str_labelforeColor" | Add-Content $logfilename -Encoding UTF8
+
+	$label.font = $Font
+
 	# Text placement settings
 	$mode = Read-Host "TextAlign random mode: r or R , select mode: s or S"
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
@@ -760,22 +767,51 @@ function Show_Message($text){
 	$TextAlign = $label.TextAlign
 	"TextAlign: $TextAlign" | Add-Content $logfilename -Encoding UTF8
 
-	$str_labelforeColor = Get-RandomColor
-#	Write-Host "[Show_Message]str_labelForeColor: $str_labelforeColor"
-	$label.forecolor = $str_labelforeColor
-	"strColor: $str_labelforeColor" | Add-Content $logfilename -Encoding UTF8
-
-	$label.font = $Font
-
 	# Image Settings
+	$mode = $null
+	$pattern = $null
 	$mode = Read-Host "Image random mode: r or R, select mode: s or S, in case of no need is others"
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
-		# Set images randomly.
-		$label.Image = Get-RandomSourceImg
-	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
-		# Select an image to set.
-		$label.Image = Get-SelectSourceImg
+		$pattern = Read-Host "Image pattern:please Enter. repeating pattern(default): y spot: n"
+		switch -Wildcard ($pattern) {
+			"[yY]"{ 
+				Write-Host "pattern1"
+				$label.BackgroundImage = Get-RandomSourceImg		
+			}
+			"[nN]"{
+				Write-Host "pattern2"
+				# Set images randomly.
+				$label.Image = Get-RandomSourceImg		
+			}
+			Default {
+				Write-Host "default1"
+				$label.BackgroundImage = Get-RandomSourceImg
+			}
+		}
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')){
+		$pattern = Read-Host "Image pattern:please Enter. repeating pattern(default): y spot: n"
+		switch -Wildcard ($pattern) {
+			"[yY]"{ 
+				Write-Host "pattern3"
+				$label.BackgroundImage = Get-SelectSourceImg		
+			}
+			"[nN]"{
+				Write-Host "pattern4"
+				# Set select images
+				$label.Image = Get-SelectSourceImg		
+			}
+			Default {
+				Write-Host "default2"
+				$label.BackgroundImage = Get-SelectSourceImg
+			}
+		}
+	}else {
+		# Image: nothing
+		Write-Host "pattern5"
 	}
+
+	# Image's place settings
+
 
 	$form.Topmost = $True
 	$form.AcceptButton = $OKButton
