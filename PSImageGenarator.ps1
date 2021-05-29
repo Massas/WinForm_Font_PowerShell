@@ -9,7 +9,8 @@ function Get-RandomOrSelectImage{
 		switch -Wildcard ($pattern) {
 			"[yY]"{ 
 				Write-Host "pattern1"
-				$image = Get-RandomSourceImg		
+				$image = Get-RandomSourceImg
+
 			}
 			"[nN]"{
 				Write-Host "pattern2"
@@ -222,6 +223,25 @@ function Get-SelectStoreFile{
 	Write-Host "[Get-SelectStoreFile]selected: $ret fullpath: $fullpath"
 
 	return $ret
+}
+
+# Return a random image.
+function Get-RandomBackgroundImg{
+	Write-Host "[Get-RandomBackgroundImg] START"
+	# Add an array item to the combo box
+	$arr = Get-ChildItem -Path $backgroundImgDir -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
+
+	$count_arr = $arr.Count
+	$num_select = Get-Random -Maximum ($count_arr - 1)
+	$selected = $arr[$num_select]
+
+	$fullpath = $backgroundImgDir + $selected
+	Write-Host "selected: $selected, fullpath: $fullpath"
+
+	$img = [System.Drawing.Image]::FromFile($fullpath)
+
+	Write-Host "[Get-RandomBackgroundImg] END"
+	return $img
 }
 
 # Return a random image.
@@ -899,7 +919,8 @@ function Show_Message($text){
 		switch -Wildcard ($pattern) {
 			"[yY]"{ 
 				Write-Host "pattern1"
-				$label.BackgroundImage = Get-RandomSourceImg		
+				#$label.BackgroundImage = Get-RandomSourceImg
+				$label.BackgroundImage = Get-RandomBackgroundImg
 			}
 			"[nN]"{
 				Write-Host "pattern2"
