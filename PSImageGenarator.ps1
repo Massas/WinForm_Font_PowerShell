@@ -46,6 +46,50 @@ function Get-RandomOrSelectImage{
 	return $image
 }
 
+function Get-RectValues($image,$rectmode){
+	Write-Host "[Get-RectValues]:START"
+	[Array]$arr = $image
+#	$type = $arr.GetType()
+#	Write-Host "type:$type"
+	$Image = $arr[0]
+	$mode = $arr[1]
+#	Write-Host "$Image, $mode"
+
+	switch($mode) {
+		"x"{ 
+			Write-Host "mode1"
+			$ret_xcoodinate = Get-Random -Maximum 360 -Minimum 0
+			Write-Host "ret_xcoodinate: $ret_xcoodinate"
+			return $ret_xcoodinate
+		}
+		"y"{
+			Write-Host "mode2"
+			$ret_ycoodinate = Get-Random -Maximum 360 -Minimum 0
+			Write-Host "ret_ycoodinate: $ret_ycoodinate"
+			return $ret_ycoodinate
+		}
+		"width"{ 
+			Write-Host "mode3:width"
+			Write-Host $image.Width
+			$ret_width = Get-Random -Maximum ($Image.Width) -Minimum 1
+			Write-Host "ret_width: $ret_width"
+			return $ret_width
+		}
+		"height"{
+			Write-Host "mode4:height"
+			Write-Host $image.Height
+			$ret_height = Get-Random -Maximum ($Image.Height) -Minimum 1
+			Write-Host "ret_height: $ret_height"
+			return $ret_height
+		}
+		Default {
+			Write-Host "default"
+		}
+	}
+
+	Write-Host "[Get-RectValues]:END"
+}
+
 # create new background image processes's main routine
 function New-BakcgroundImg{
 	Write-Host "[New-BakcgroundImg]:START"
@@ -54,8 +98,26 @@ function New-BakcgroundImg{
 	if ($null -eq $image) {
 		Write-Host "[New-BakcgroundImg]:image is nothing"
 		return
-	}
+	}	
 	Write-Host $image.GetType()
+
+	# Get Rectangle's values
+	$mode = "x"
+	$xcoodinate = Get-RectValues($image,$mode)
+	$mode = "y"
+	$ycoodinate = Get-RectValues($image,$mode)
+	$mode = "width"
+	$width = Get-RectValues($image,$mode)
+	$mode = "height"
+	$height = Get-RectValues($image,$mode)
+
+	# Crop the image
+#	$Rect = New-Object System.Drawing.Rectangle(17, 89, 600, 234)
+	$Rect = New-Object System.Drawing.Rectangle($xcoodinate, $ycoodinate, $width, $height)
+	$Dstimage = $image.Clone($Rect, 925707)
+	$savename = Read-Host "please enter filename to save as PNG"
+	$Dstimage.Save($backgroundImgDir + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)
+
 	Write-Host "[New-BakcgroundImg]:END"
 }
 
