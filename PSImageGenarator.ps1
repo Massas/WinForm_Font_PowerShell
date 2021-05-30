@@ -1086,6 +1086,23 @@ function Show_WinForm($mode) {
 	}
 }
 
+function Get-Storefile{
+	# Select the data store file
+	$mode = Read-Host "storefile random mode: r or R , select mode: s or S"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# Set a random data store file
+		$storefilename = Get-RandomStoreFile
+		Write-Host "storefilename: $storefilename"
+	}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
+		# Selecting and setting a data store file
+		$storefilename = Get-SelectStoreFile
+		Write-Host "storefilename: $storefilename"
+	}
+	$filename_store = $store_fileDir + $storefilename
+
+	return $filename_store	
+}
+
 # main
 
 # Loading an assembly
@@ -1099,19 +1116,6 @@ $sourceImgDir = (Get-Location).Path + '\source_img\'
 $store_fileDir = (Get-Location).Path + '\store_file\'
 $backgroundImgDir = (Get-Location).Path + '\background_img\'
 
-# Select the data store file
-$mode = Read-Host "storefile random mode: r or R , select mode: s or S"
-if(($mode -eq 'r') -or ($mode -eq 'R')){
-	# Set a random data store file
-	$storefilename = Get-RandomStoreFile
-	Write-Host "storefilename: $storefilename"
-}elseif(($mode -eq 's') -or ($mode -eq 'S')) {
-	# Selecting and setting a data store file
-	$storefilename = Get-SelectStoreFile
-	Write-Host "storefilename: $storefilename"
-}
-
-$filename_store = $store_fileDir + $storefilename
 
 while ($true) {
 	Write-Host "[[MAIN FUNCTION]]"
@@ -1119,6 +1123,9 @@ while ($true) {
     $select = Read-Host "if want to register words, enter 's'. if you want to create background image, enter 'b'."
     if(($select -eq 'r') -or ($select -eq 'R')){
 		$r_storestr = $null
+
+		# Get random or select store file name
+		$filename_store = Get-Storefile
 
 		$mode = Read-Host "Str random mode: r or R , select mode: s or S"
 		if(($mode -eq 'r') -or ($mode -eq 'R')){
