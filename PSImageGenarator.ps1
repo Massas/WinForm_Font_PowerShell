@@ -1077,6 +1077,10 @@ function Show_WinForm($mode) {
 	if((($mode -eq "register") -or ($mode -eq "S")) -and ($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
 		$registerStr = $textBox.Text
 		$registerStr | Add-Content $filename_store -Encoding UTF8
+
+		# Check usage rights for font's legal compliance.
+		Check_UsageRights($Font)
+
 	}elseif (($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
 		$registerStr = $textBox.Text
 		Write-Host "$registerStr"
@@ -1103,6 +1107,25 @@ function Get-Storefile{
 	return $filename_store	
 }
 
+function Check_UsageRights($Font){
+	# Get a comma-separated confirmation array
+
+	# Get the value of the corresponding element.
+
+	# If there is no corresponding font, 
+	# the rights cannot be ascertained and recommend updating this information.
+}
+
+function Get-FontList{
+	Write-Host "[Get-FontList] START"
+	$date = Get-Date -Format yyyyMMdd
+	$fontlistname = "./fontlist_" + $date + ".txt"
+
+	$arr_font_all = [System.Drawing.FontFamily]::Families
+	$arr_font_all | Select-Object Name | Add-Content $fontlistname -Encoding UTF8
+	Write-Host "[Get-FontList] END"
+}
+
 # main
 
 # Loading an assembly
@@ -1120,6 +1143,7 @@ $backgroundImgDir = (Get-Location).Path + '\background_img\'
 while ($true) {
 	Write-Host "[[MAIN FUNCTION]]"
 	Write-Host "please enter to start. if you want to quit, please 'q'. if you want to check registered str, enter 'r'."
+	Write-Host "if you want to get font list, enter 'g'."
     $select = Read-Host "if want to register words, enter 's'. if you want to create background image, enter 'b'."
     if(($select -eq 'r') -or ($select -eq 'R')){
 		$r_storestr = $null
@@ -1144,6 +1168,9 @@ while ($true) {
 	}elseif(($select -eq 'b') -or ($select -eq 'B')){
 		# create new background image
 		New-BakcgroundImg
+	}elseif(($select -eq 'g') -or ($select -eq 'G')){
+        # Get font list
+        Get-FontList
 	}elseif(($select -ne 'q') -or ($select -ne 'Q')){
         # Windows Form shows
         Show_WinForm
