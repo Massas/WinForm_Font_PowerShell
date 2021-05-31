@@ -1122,7 +1122,11 @@ function Get-FontList{
 	$fontlistname = "./fontlist_" + $date + ".txt"
 
 	$arr_font_all = [System.Drawing.FontFamily]::Families
-	$arr_font_all | Select-Object Name | Add-Content $fontlistname -Encoding UTF8
+
+#	$arr_font_all | Select-Object Name | Add-Content $fontlistname -Encoding UTF8
+	foreach($font in $arr_font_all){
+		$font.Name | Add-Content $fontlistname -Encoding UTF8
+	}
 	Write-Host "[Get-FontList] END"
 }
 
