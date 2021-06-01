@@ -100,7 +100,7 @@ function New-BakcgroundImg{
 		Write-Host "[New-BakcgroundImg]:image is nothing"
 		return
 	}	
-	Write-Host $image.GetType()
+#	Write-Host $image.GetType()
 
 	# Get Rectangle's values
 	$mode = "x"
@@ -115,11 +115,20 @@ function New-BakcgroundImg{
 	# Crop the image
 #	$Rect = New-Object System.Drawing.Rectangle(17, 89, 600, 234)
 	$Rect = New-Object System.Drawing.Rectangle($xcoodinate, $ycoodinate, $width, $height)
-	$Dstimage = $image.Clone($Rect, 925707)
+
+	try {
+		$Dstimage = $image.Clone($Rect, 925707)
+	}
+	catch {
+		Write-Host "[New-BakcgroundImg]:recursive call"
+		New-BakcgroundImg
+		return
+	}
 	$savename = Read-Host "please enter filename to save as PNG"
-	$Dstimage.Save($backgroundImgDir + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)
+	$Dstimage.Save($backgroundImgDir + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)		
 
 	Write-Host "[New-BakcgroundImg]:END"
+	return
 }
 
 # Return a random datastore file.
