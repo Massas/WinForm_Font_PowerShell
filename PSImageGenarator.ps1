@@ -47,39 +47,41 @@ function Get-RandomOrSelectImage{
 	return $image
 }
 
-function Get-RectValues($image,$rectmode){
+function Get-RectValues($image, $rectmode, $substrahend){
 	Write-Host "[Get-RectValues]:START"
 	[Array]$arr = $image
 #	$type = $arr.GetType()
 #	Write-Host "type:$type"
 	$Image = $arr[0]
 	$mode = $arr[1]
+	$substrahend = $arr[2]
+
 #	Write-Host "$Image, $mode"
 
 	switch($mode) {
 		"x"{ 
 			Write-Host "mode1"
-			$ret_xcoodinate = Get-Random -Maximum 360 -Minimum 0
+			$ret_xcoodinate = Get-Random -Maximum $Image.Width -Minimum 0
 			Write-Host "ret_xcoodinate: $ret_xcoodinate"
 			return $ret_xcoodinate
 		}
 		"y"{
 			Write-Host "mode2"
-			$ret_ycoodinate = Get-Random -Maximum 360 -Minimum 0
+			$ret_ycoodinate = Get-Random -Maximum $Image.Height -Minimum 0
 			Write-Host "ret_ycoodinate: $ret_ycoodinate"
 			return $ret_ycoodinate
 		}
-		"width"{ 
+		"width"{
 			Write-Host "mode3:width"
 			Write-Host $image.Width
-			$ret_width = Get-Random -Maximum ($Image.Width) -Minimum 1
+			$ret_width = Get-Random -Maximum (($Image.Width) - $substrahend) -Minimum 1
 			Write-Host "ret_width: $ret_width"
 			return $ret_width
 		}
 		"height"{
 			Write-Host "mode4:height"
 			Write-Host $image.Height
-			$ret_height = Get-Random -Maximum ($Image.Height) -Minimum 1
+			$ret_height = Get-Random -Maximum (($Image.Height) - $substrahend) -Minimum 1
 			Write-Host "ret_height: $ret_height"
 			return $ret_height
 		}
@@ -104,13 +106,13 @@ function New-BakcgroundImg{
 
 	# Get Rectangle's values
 	$mode = "x"
-	$xcoodinate = Get-RectValues($image,$mode)
+	$xcoodinate = Get-RectValues($image, $mode, 0)
 	$mode = "y"
-	$ycoodinate = Get-RectValues($image,$mode)
+	$ycoodinate = Get-RectValues($image, $mode, 0)
 	$mode = "width"
-	$width = Get-RectValues($image,$mode)
+	$width = Get-RectValues($image, $mode, $xcoodinate)
 	$mode = "height"
-	$height = Get-RectValues($image,$mode)
+	$height = Get-RectValues($image, $mode, $ycoodinate)
 
 	# Crop the image
 #	$Rect = New-Object System.Drawing.Rectangle(17, 89, 600, 234)
@@ -440,34 +442,34 @@ function Get-SelectSourceImg{
 
 # Pass a Windows Form to convert and save it as an image file.
 function Convert-LabelToImage($form){
-	#	Write-Host "Convert-LabelToImage: START"
+#	Write-Host "Convert-LabelToImage: START"
+
+#	$formType = $form.GetType()
+#	Write-Host "formType: $formType"
+	$size = $label.Size
+	$height = $size.Height
+	$width = $size.Width
+#	$sizeType = $size.GetType()
+#	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
+
+	$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
+	$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
+	# Convert a label to a Bitmap
+	$form.DrawToBitmap($DstBmp, $Rect)
+
+	$savename = Read-Host "please enter filename to save as PNG" 
 	
-	#	$formType = $form.GetType()
-	#	Write-Host "formType: $formType"
-		$size = $label.Size
-		$height = $size.Height
-		$width = $size.Width
-	#	$sizeType = $size.GetType()
-	#	Write-Host "size Type: $sizeType, value: $size, width: $width, height: $height"
-	
-		$DstBmp = New-Object System.Drawing.Bitmap($width, $height)
-		$Rect = New-Object System.Drawing.Rectangle(0, 0, $width, $height)
-		# Convert a label to a Bitmap
-		$form.DrawToBitmap($DstBmp, $Rect)
-	
-		$savename = Read-Host "please enter filename to save as PNG" 
-		
-		try{
-			# Save the file
-			$DstBmp.Save((Get-Location).Path + '\WinForm_png\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)	
-		}catch{
-			Write-Host "Save failed."
-			throw ArgumentNullException
-		}
-		"savename: $savename" | Add-Content $logfilename -Encoding UTF8
-	
-	#	Write-Host "Convert-LabelToImage: END"
+	try{
+		# Save the file
+		$DstBmp.Save((Get-Location).Path + '\WinForm_png\' + "$savename", [System.Drawing.Imaging.ImageFormat]::Png)	
+	}catch{
+		Write-Host "Save failed."
+		throw ArgumentNullException
 	}
+	"savename: $savename" | Add-Content $logfilename -Encoding UTF8
+
+#	Write-Host "Convert-LabelToImage: END"
+}
 	
 # Return a random label size
 function Get-RandomLabelSize{
