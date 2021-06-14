@@ -956,6 +956,15 @@ function Get-SelectFont{
 	return $ret
 }
 
+function Get-RandomBool{
+	$arr = @('@true', '@false')
+	$count = $arr.Count
+	$num_select = Get-Random -Maximum $count -Minimum 0
+	$selected = $arr[$num_select]
+
+	return $selected
+}
+
 function Show_Message($text){
 #	Write-Host "Show_Message: start"
 	$partition = "==========================="
@@ -1110,9 +1119,18 @@ function Show_Message($text){
 		Write-Host "pattern5"
 	}
 
+	# label size autosize
+	$mode = Read-Host "label size autosize mode: r, yes: y, no: n"
+	if(($mode -eq 'r') -or ($mode -eq 'R')){
+		# Set a random true or false
+		$label.autosize = Get-RandomBool
+	}elseif(($mode -eq 'y') -or ($mode -eq 'Y')) {
+		$label.autosize = $true
+	}else {
+		$label.autosize = $false
+	}
+
 	# Image's place settings
-
-
 	$form.Topmost = $True
 	$form.AcceptButton = $OKButton
 	$form.CancelButton = $CancelButton
