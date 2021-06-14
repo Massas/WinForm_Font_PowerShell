@@ -140,7 +140,7 @@ function Get-RandomStoreFile{
 
 	$count_arr = $arr.Count
 	if($count_arr -ge 2){
-		$num_select = Get-Random -Maximum ($count_arr - 1) -Minimum 0
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
 	}elseif ($count_arr -eq 1) {
 		$num_select = 0
 	}else {
@@ -243,7 +243,15 @@ function Get-RandomBackgroundImg{
 	$arr = Get-ChildItem -Path $backgroundImgDir -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
 
 	$count_arr = $arr.Count
-	$num_select = Get-Random -Maximum ($count_arr - 1)
+	if($count_arr -ge 2){
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
+	}elseif ($count_arr -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data!"
+		return
+	}
+
 	$selected = $arr[$num_select]
 
 	$fullpath = $backgroundImgDir + $selected
@@ -345,7 +353,15 @@ function Get-RandomSourceImg{
 	$arr = Get-ChildItem -Path ./source_img -Include @("*.jpg","*.jpeg","*.png","*.gif") -Name
 
 	$count_arr = $arr.Count
-	$num_select = Get-Random -Maximum ($count_arr - 1)
+	if($count_arr -ge 2){
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
+	}elseif ($count_arr -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data!"
+		return
+	}
+
 	$selected = $arr[$num_select]
 
 	$fullpath = $sourceImgDir + $selected
@@ -477,7 +493,16 @@ function Get-RandomLabelSize{
 	# Get the size definition from the file and put it into an array
 	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
 	$count_arr = $arr_size.Count
-	$num_select = Get-Random -Maximum ($count_arr - 1) -Minimum 0
+
+	if($count_arr -ge 2){
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
+	}elseif ($count_arr -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data store file!"
+		return
+	}
+
 	$selectsize = $arr_size[$num_select]
 	Write-Host "[Get-RandomLabelSize]selectsize: $selectsize num_all: $count_arr ,num_select: $num_select"
 
@@ -570,7 +595,16 @@ function Get-RandomTextAlign{
 	# Get the definition of an enumerated type and put it into an array.
 	$arr = [System.Drawing.ContentAlignment]|get-member -static -MemberType Property | Select-Object Name	
 	$count_arr = $arr.Count
-	$num_select = Get-Random -Maximum ($count_arr - 1)
+
+	if($count_arr -ge 2){
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
+	}elseif ($count_arr -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data!"
+		return
+	}
+
 	$selected = $arr[$num_select]
 	$ret = $selected.Name
 
@@ -664,7 +698,16 @@ function Get-RandomRegisteredStr($storefilename){
 	# Read the registered contents from the file and put it into an array
 	$arr_file = Get-Content -LiteralPath $storefilename -Encoding UTF8
 	$count_arr = $arr_file.Count
-	$num_select = Get-Random -Maximum ($count_arr - 1)
+
+	if($count_arr -ge 2){
+		$num_select = Get-Random -Maximum $count_arr -Minimum 0
+	}elseif ($count_arr -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data!"
+		return
+	}
+
 	$selectstr = $arr_file[$num_select]
 	Write-Host "[Get-RandomRegisteredStr]selectstr: $selectstr num_all: $count_arr ,num_select: $num_select"
 
@@ -765,7 +808,16 @@ function Get-RandomColor{
 		$arr_color += $color
 	}
 	$count = $arr_color.Count
-	$select = Get-Random -Maximum ($count - 1)
+
+	if($count -ge 2){
+		$select = Get-Random -Maximum $count -Minimum 0
+	}elseif ($count -eq 1) {
+		$select = 0
+	}else {
+		Write-Host "There is no data!"
+		return
+	}
+
 	$retcolor = $arr_color[$select]
 
 	Write-Host $retcolor.Name
@@ -796,7 +848,15 @@ function Get-RandomFont{
 	Write-Host "[Get-RandomFont]count_all: $count_all, count: $count"
 #	Write-Host "arr_font: $arr_font"
 
-	$num_select = Get-Random -Maximum ($count - 1)
+	if($count -ge 2){
+		$num_select = Get-Random -Maximum $count -Minimum 0
+	}elseif ($count -eq 1) {
+		$num_select = 0
+	}else {
+		Write-Host "There is no data store file!"
+		return
+	}
+
 	Write-Host "num_select: $num_select"
 	$ret_font = $arr_font[$num_select]
 	$ret_str = $ret_font.Name
@@ -1172,6 +1232,7 @@ function Show_WinForm($mode) {
 
 	if((($mode -eq "register") -or ($mode -eq "S")) -and ($result -eq "OK") -and ($textBox.Text.Length -gt 0)){
 		$registerStr = $textBox.Text
+		$filename_store = Get-Storefile
 		$registerStr | Add-Content $filename_store -Encoding UTF8
 
 		# Check usage rights for font's legal compliance.
