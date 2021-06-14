@@ -957,10 +957,12 @@ function Get-SelectFont{
 }
 
 function Get-RandomBool{
-	$arr = @('@true', '@false')
+	$arr = @('$true', '$false')
 	$count = $arr.Count
 	$num_select = Get-Random -Maximum $count -Minimum 0
 	$selected = $arr[$num_select]
+
+	Write-Host "Get-RandomBool : $selected"
 
 	return $selected
 }
@@ -1123,7 +1125,16 @@ function Show_Message($text){
 	$mode = Read-Host "label size autosize mode: r, yes: y, no: n"
 	if(($mode -eq 'r') -or ($mode -eq 'R')){
 		# Set a random true or false
-		$label.autosize = Get-RandomBool
+		$autosizemode = Get-RandomBool
+		Write-Host "autosizemode : $autosizemode"
+
+		if($autosizemode -eq '$true'){
+			$label.autosize = $true
+			Write-Host "autosize: true"
+		}else{
+			$label.autosize = $false
+			Write-Host "autosize: false"
+		}
 	}elseif(($mode -eq 'y') -or ($mode -eq 'Y')) {
 		$label.autosize = $true
 	}else {
