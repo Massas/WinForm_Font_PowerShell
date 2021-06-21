@@ -119,7 +119,8 @@ function New-BakcgroundImg{
 	$Rect = New-Object System.Drawing.Rectangle($xcoodinate, $ycoodinate, $width, $height)
 
 	try {
-		$Dstimage = $image.Clone($Rect, 925707)
+		# PoxelFormat 2498570
+		$Dstimage = $image.Clone($Rect, 2498570)
 	}
 	catch {
 		Write-Host "[New-BakcgroundImg]:recursive call"
@@ -251,7 +252,6 @@ function Get-RandomBackgroundImg{
 		Write-Host "There is no data!"
 		return
 	}
-
 	$selected = $arr[$num_select]
 
 	$fullpath = $backgroundImgDir + $selected
@@ -361,7 +361,6 @@ function Get-RandomSourceImg{
 		Write-Host "There is no data!"
 		return
 	}
-
 	$selected = $arr[$num_select]
 
 	$fullpath = $sourceImgDir + $selected
@@ -493,16 +492,14 @@ function Get-RandomLabelSize{
 	# Get the size definition from the file and put it into an array
 	$arr_size = Get-Content -LiteralPath $sizefilename -Encoding UTF8
 	$count_arr = $arr_size.Count
-
 	if($count_arr -ge 2){
 		$num_select = Get-Random -Maximum $count_arr -Minimum 0
 	}elseif ($count_arr -eq 1) {
 		$num_select = 0
 	}else {
-		Write-Host "There is no data store file!"
+		Write-Host "There is no data!"
 		return
 	}
-
 	$selectsize = $arr_size[$num_select]
 	Write-Host "[Get-RandomLabelSize]selectsize: $selectsize num_all: $count_arr ,num_select: $num_select"
 
@@ -698,7 +695,6 @@ function Get-RandomRegisteredStr($storefilename){
 	# Read the registered contents from the file and put it into an array
 	$arr_file = Get-Content -LiteralPath $storefilename -Encoding UTF8
 	$count_arr = $arr_file.Count
-
 	if($count_arr -ge 2){
 		$num_select = Get-Random -Maximum $count_arr -Minimum 0
 	}elseif ($count_arr -eq 1) {
@@ -808,7 +804,6 @@ function Get-RandomColor{
 		$arr_color += $color
 	}
 	$count = $arr_color.Count
-
 	if($count -ge 2){
 		$select = Get-Random -Maximum $count -Minimum 0
 	}elseif ($count -eq 1) {
@@ -817,7 +812,6 @@ function Get-RandomColor{
 		Write-Host "There is no data!"
 		return
 	}
-
 	$retcolor = $arr_color[$select]
 
 	Write-Host $retcolor.Name
@@ -971,7 +965,6 @@ function Get-ModifiedFontSize($label){
 	Write-Host "[Get-ModifiedFontSize] START"
 
 	$size_arr = @(7, 8, 10.5, 12, 14, 16, 20, 24, 28, 32, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 100)
-
 
 	for($i = $size_arr.Count; $i -gt 0; $i--){
 		Write-Host fontsize: $label.Font.size
