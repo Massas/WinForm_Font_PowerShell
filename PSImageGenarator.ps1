@@ -967,6 +967,34 @@ function Get-RandomBool{
 	return $selected
 }
 
+function Get-ModifiedFontSize($label){
+	Write-Host "[Get-ModifiedFontSize] START"
+
+	$size_arr = @(7, 8, 10.5, 12, 14, 16, 20, 24, 28, 32, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 100)
+
+
+	for($i = $size_arr.Count; $i -gt 0; $i--){
+		Write-Host fontsize: $label.Font.size
+
+		$modifiedsize = [System.Windows.Forms.TextRenderer]::MeasureText($label.Text, $label.Font, $label.Size)
+		Write-Host "modified size : $modifiedsize"
+	
+		if(($modifiedsize.Width -gt $label.Size.Width) -or ($modifiedsize.Height -gt $label.Size.Height)){
+			Write-Host "over size"
+			$Font = New-Object System.Drawing.Font("$font_selected", $size_arr[$i - 1])
+			$label.font = $Font
+		}else {
+			break
+		}
+	
+	}
+	
+	Write-Host "[Get-ModifiedFontSize] END"
+
+	return $label
+}
+
+
 function Show_Message($text){
 #	Write-Host "Show_Message: start"
 	$partition = "==========================="
@@ -1032,6 +1060,7 @@ function Show_Message($text){
 		$font_selected = Get-SelectFont
 	}
 	Write-Host "font_selected: $font_selected"
+	# make font size autosize
 	$Font = New-Object System.Drawing.Font("$font_selected", 100)
 	"font_selected: $font_selected" | Add-Content $logfilename -Encoding UTF8
 
@@ -1140,6 +1169,10 @@ function Show_Message($text){
 	}else {
 		$label.autosize = $false
 	}
+
+	# make font size autosize by MeasureText(String, Font, Size)
+	$modified_label = Get-ModifiedFontSize($label)
+	$label = $modified_label
 
 	# Image's place settings
 	$form.Topmost = $True
